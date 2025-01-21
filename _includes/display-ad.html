@@ -1,0 +1,16 @@
+{% if include.environment == 'production' and include.sitemap != false %}
+<div align="center">
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+    data-ad-client="{{ site.adsense-data-ad-client }}"
+    data-ad-slot="{{ site.adsense-data-display-ad-slot }}"
+  ></ins>
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{% endif %}
