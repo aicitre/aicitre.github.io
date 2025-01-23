@@ -36,17 +36,6 @@ pagination:
         {% endunless %}
       </div>
   
-      <div>
-        {% if page.tags.size > 0 %}
-        {% for tag in page.tags %}
-        {% assign tagSlug = tag | downcase | slugify: "raw" %}
-        <a href="{{ '/tag/' | relative_url }}{{ tagSlug }}/"
-          class="inline-block rounded-full border-0.5 bg-{{ tagSlug }}-100 border-{{ tagSlug }}-200 text-{{ tagSlug }}-500 px-3 py-1 text-sm font-semibold mr-2 mb-2">
-          #{{ tag }}
-        </a>
-        {% endfor %}
-        {% endif %}
-      </div>
     </div>
   
     <!-- Image Block -->
@@ -101,7 +90,12 @@ pagination:
     {% endunless %}
   </div>
 
-
+<div class="entry-labels"><span class="labels-label">Tags:</span>
+{% if page.tags.size > 0 %}{% for tag in page.tags %}{% assign tagSlug = tag | downcase | slugify: "raw" %}
+<a class="label-link" href="{{ '/tag/' | relative_url }}{{ tagSlug }}/" rel="tag">#{{ tag }}</a>
+{% endfor %}{% endif %}
+</div>
+	
 <footer class="post-footer">
 <!-- Related Post -->
 {% assign size = site.related_posts | size %}
