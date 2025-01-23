@@ -118,20 +118,11 @@ pagination:
       {% endif %}
     </div>
     
-    <div class="px-3 flex justify-end">
-      {% if page.next.url %}
-      <a href="{{ page.next.url | relative_url }}" title="{{ page.next.title | strip_html | xml_escape }}"
-        class="flex items-center bg-transparent border border-navysciam text-navysciam hover:bg-navysciam hover:text-white text-center py-2 px-4 rounded">
-        Article suivant &rarr;
-      </a>
-      {% else %}
-      <button disabled
-      class="flex items-center bg-transparent border border-navysciam text-navysciam hover:bg-navysciam hover:text-white text-center py-2 px-4 rounded disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-       type="button">Article suivant &rarr;
-      </button>
-      {% endif %}
-    </div>
-  </div>
+
+<div class="post-nav">
+{% if page.previous.url %}<a class="post-nav-newer-link" href="{{ page.next.url | relative_url }}" id="Blog1_post-nav-newer-link">Previous Post</a>{% endif %}
+{% if page.next.url %}<a class="post-nav-older-link" href="{{page.next.url | relative_url}}" id="Blog1_post-nav-older-link">Next Post</a>{% endif %}
+</div>
 
   <div class="mx-auto shadow-custom-bottom-shadow">
     <script src="https://giscus.app/client.js" data-repo="SCIAM-FR/sciam-fr.github.io" data-repo-id="R_kgDOJnEX-w"
