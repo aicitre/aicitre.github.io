@@ -5,7 +5,7 @@
 {% endif %}
 </div>
 <div class="author-description">
-<span class="author-title"><a alt="{{ author.name }}" href="{{ '/author/' | append: auteur | append: '/index.html' | relative_url }}" rel="noopener noreferrer" target="_blank">{{ author.name }}</a></span>
+<span class="author-title">{{ author.name }}</span>
 {% if author.job %}
 <p class="author-text excerpt">{{ author.job }}</p>
 {% endif %}
