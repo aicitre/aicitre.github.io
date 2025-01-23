@@ -100,24 +100,7 @@ pagination:
     </div>
     {% endunless %}
   </div>
-    <!-- 
-      Pagination Buttons 
-    -->
-  <div class="flex items-center mx-3 mb-6 mt-10 justify-between">
-    <div class="px-3 flex justify-start">
-      {% if page.previous.url %}
-      <a href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title | strip_html | xml_escape }}"
-        class="flex items-center bg-transparent border border-navysciam text-navysciam hover:bg-navysciam hover:text-white text-center py-2 px-4 rounded">
-        &larr; Article précédent
-      </a>
-      {% else %}
-      <button disabled
-      class="flex items-center bg-transparent border border-navysciam text-navysciam hover:bg-navysciam hover:text-white text-center py-2 px-4 rounded disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-      type="button">&larr; Article précédent
-      </button>
-      {% endif %}
-    </div>
-    
+
 
 <div class="post-nav">
 {% if page.previous.url %}<a class="post-nav-newer-link" href="{{ page.next.url | relative_url }}" id="Blog1_post-nav-newer-link">Previous Post</a>{% endif %}
