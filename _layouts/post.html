@@ -13,8 +13,6 @@ pagination:
 <div class="entry-header blog-entry-header has-meta">
 <h1 class="entry-title">{{ page.title }}</h1>
 <div class="entry-meta"><div class="align-left">
-{% assign author = site.authors[page.author] %}
-
 {% if page.auteurs.size > 1 %}{% for auteur in page.auteurs %}{% assign author = site.data.authors[auteur] %}{% if author.name %}
 <span class="entry-author"><span class="author-avatar-wrap">
 {% if page.author %}
@@ -35,8 +33,7 @@ pagination:
 {% if page.last_modified_at %}
 (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
 {% endif %}
-{% endif %}{% endif %}
-	
+{% endif %}{% endif %}	
 </div></div>
 </div>
 	    
