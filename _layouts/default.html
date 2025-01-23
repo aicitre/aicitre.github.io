@@ -39,7 +39,9 @@
   {% endif %}
 </head>
 
-<body class="bg-grayBgSciam scroll-smooth">
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+<body class="{{ layout }} is-multiple is-boxed">
+  
   <div class="flex flex-col justify-between">
     <nav class="bg-navysciam w-full sticky top-0 py-4 px-7 sm:px-28 z-50">
       <div class="flex items-center justify-between">
