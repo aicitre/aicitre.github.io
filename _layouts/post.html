@@ -18,8 +18,9 @@ pagination:
 <div class="align-left">
 <span class="entry-author"><span class="author-avatar-wrap">
 {% if author.picture %}
-<span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})"></span></span>
+<span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})"></span>
 {% endif %}
+</span>
 <span class="by">by</span><span class="author-name">{{ author.name }}</span></span>	
 <span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>
 {% if page.last_modified_at %}
