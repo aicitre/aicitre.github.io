@@ -14,34 +14,29 @@ pagination:
 <h1 class="entry-title">{{ page.title }}</h1>
 <div class="entry-meta"><div class="align-left">
 {% assign author = site.authors[page.author] %}
-<span class="entry-author">
-  <span class="author-avatar-wrap">
-    {% if page.author %}
-      {% if author.picture %}
-        <span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})">
-        </span>
-      {% else %}
-        <span class="author-avatar lazy-ify" style="background-image:url('/path/to/default-image.jpg')">
-        </span>
-      {% endif %}
-    {% endif %}
-  </span>
-  <span class="by">by</span>
-  <span class="author-name">
-    {% if author.name %}
-      {{ author.name }}
-    {% else %}
-      Default Author Name
-    {% endif %}
-  </span>
-</span>
-<span class="entry-time">
-  <span class="on">-</span>
-  <time class="published" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-</span>
+
+{% if page.auteurs.size > 1 %}{% for auteur in page.auteurs %}{% assign author = site.data.authors[auteur] %}{% if author.name %}
+<span class="entry-author"><span class="author-avatar-wrap">
+{% if page.author %}
+<span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})">
+</span></span>
+<span class="by">by</span><span class="author-name">{{ author.name }}</span></span>{% endif %}
+<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>
 {% if page.last_modified_at %}
-  (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+(Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
 {% endif %}
+{% endif %}{% endfor %}{% else %}{% assign author = site.data.authors[page.author] %}{% if author.name %}
+<span class="entry-author"><span class="author-avatar-wrap">
+{% if page.author %}
+<span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})">
+</span></span>
+<span class="by">by</span><span class="author-name">{{ author.name }}</span></span>{% endif %}
+<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>
+{% if page.last_modified_at %}
+(Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+{% endif %}
+{% endif %}{% endif %}
+	
 </div></div>
 </div>
 	    
