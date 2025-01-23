@@ -35,16 +35,10 @@ pagination:
 </div></div>
 </div>
 	    
+<div class="separator" style="clear: both; text-align: center;">
+<img alt="{{ page.title }}" border="0" data-original-height="1000" data-original-width="1500" src="{{ '/images/vignettes/' | append: page.vignette | relative_url }}" title="{{ page.title }}">
+</div>
 
-    <!-- Image Block -->
-    <div class="order-1 md:order-2 col-span-12 md:col-span-6 flex justify-center items-center rounded-lg shadow-md bg-white">
-      <div class="h-72 flex items-center justify-center">
-        <img src="{{ '/images/vignettes/' | append: page.vignette | relative_url }}" alt="Description"
-          class="object-cover max-h-full">
-      </div>
-    </div>
-
-  
   <!-- Main Content and Sidebar -->
   <div class="grid grid-cols-{% if page.categories contains 'video' %}15{% else %}12{% endif %} gap-4 mt-4">
    <div class="bg-white col-span-12 md:col-span-9 p-8 rounded-xl shadow-lg overflow-hidden
