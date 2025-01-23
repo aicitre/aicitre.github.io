@@ -6,9 +6,7 @@ pagination:
 {% include ads/header-ads-wrap.html %}
 <div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
 
-<div class="grid grid-cols-12 gap-4 py-16 md:py-10">
-    <!-- Information Block -->
-    <div class="order-2 md:order-1 col-span-12 md:col-span-6 text-navysciam p-8 flex flex-col justify-between">
+<article class="blog-post hentry item-post"><div class='item-post-inner'>
 
 <div class="entry-header blog-entry-header has-meta">
 <h1 class="entry-title">{{ page.title }}</h1>
@@ -37,17 +35,15 @@ pagination:
 </div></div>
 </div>
 	    
-    </div>
-  
+
     <!-- Image Block -->
-    <div
-      class="order-1 md:order-2 col-span-12 md:col-span-6 flex justify-center items-center rounded-lg shadow-md bg-white">
+    <div class="order-1 md:order-2 col-span-12 md:col-span-6 flex justify-center items-center rounded-lg shadow-md bg-white">
       <div class="h-72 flex items-center justify-center">
         <img src="{{ '/images/vignettes/' | append: page.vignette | relative_url }}" alt="Description"
           class="object-cover max-h-full">
       </div>
     </div>
-  </div>
+
   
   <!-- Main Content and Sidebar -->
   <div class="grid grid-cols-{% if page.categories contains 'video' %}15{% else %}12{% endif %} gap-4 mt-4">
@@ -150,7 +146,7 @@ pagination:
 {% if page.previous.url %}<a class="post-nav-newer-link" href="{{ page.next.url | relative_url }}" id="Blog1_post-nav-newer-link">Previous Post</a>{% endif %}
 {% if page.next.url %}<a class="post-nav-older-link" href="{{page.next.url | relative_url}}" id="Blog1_post-nav-older-link">Next Post</a>{% endif %}
 </div>
-
+</div></article>
 
 </div></div>
 
