@@ -4,7 +4,7 @@ pagination:
   enabled: true
 ---
 
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
   {% assign posts = paginator.posts %}
   {% assign category_name = "Tous les articles" %}
   {% assign navigation = site.data.navigation %}
@@ -129,4 +129,5 @@ pagination:
     </div>
   </div>
   {% include pagination.html %}
-</div>
+
+</div></div>
