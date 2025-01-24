@@ -57,6 +57,8 @@ pagination:
   </div>
 
 <div>
+  {% if posts and posts.size > 0 %}
+  <div class="blog-posts hfeed index-post-wrap" id="post-list">
   {% for post in paginator.posts %}
   <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
     <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
@@ -99,7 +101,10 @@ pagination:
       </div>
     </div>
   </article>
-  {% endfor %}
+      {% endfor %}
+      {% else %}
+      {% endif %}
+    </div>
   {% include pagination.html %}
 </div>
 
