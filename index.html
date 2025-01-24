@@ -36,27 +36,22 @@ layout: default
 <div class="widget-content"> <div class="featured-items"> <div class="featured-left"> 
 {% for post in site.posts limit:1 %} <div class="featured-item item-{{ forloop.index0 }}"> 
 <a class="entry-image-wrap" href="{{ post.url | relative_url }}" title="{{ post.title }}">
-{% if post.optimized_image %}
-<span class="entry-thumb lazy-ify" data-image="{{ post.optimized_image }}" style="background-image:url({{ post.optimized_image }})"></span>
-{% elsif post.image %}
-<span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
-{% else %}
-<span class="entry-thumb lazy-ify" data-image="/assets/img/off.jpg" style="background-image:url(/assets/img/off.png)"></span>
-{% endif %} </a> 
-<div class="entry-header"> {% if post.categories %} <span class="entry-category">{{ post.categories[0] }}</span> {% endif %} 
+{% if post.vignette %}
+        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% endif %}
+</a> 
+<div class="entry-header"> {% if post.categories %} <span class="entry-category">{{ post.categories | join: ', ' }}</span> {% endif %} 
 <h2 class="entry-title"> <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a> </h2> 
 </div> </div> {% endfor %} </div> 
 <div class="featured-right"> {% for post in site.posts limit:3 offset:1 %} 
 <div class="featured-item item-{{ forloop.index0 | plus:1 }}"> 
 <a class="entry-image-wrap" href="{{ post.url }}" title="{{ post.title }}">
-{% if post.optimized_image %}
-<span class="entry-thumb lazy-ify" data-image="{{ post.optimized_image }}" style="background-image:url({{ post.optimized_image }})"></span>
-{% elsif post.image %}
-<span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
-{% else %}
-<span class="entry-thumb lazy-ify" data-image="/assets/img/off.jpg" style="background-image:url(/assets/img/off.png)"></span>
-{% endif %} </a> 
-<div class="entry-header"> {% if post.categories %} <span class="entry-category">{{ post.categories[0] }}</span> {% endif %} 
+{% if post.vignette %}
+        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% endif %}</a> 
+<div class="entry-header"> {% if post.categories %} <span class="entry-category">{{ post.categories | join: ', ' }}</span> {% endif %} 
 <h2 class="entry-title"> <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a> </h2>
 </div> </div> {% endfor %} </div> </div> </div> </div> </div></div>
 
