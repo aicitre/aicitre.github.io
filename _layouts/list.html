@@ -56,14 +56,12 @@ pagination:
 
   <div>
     {% if posts and posts.size > 0 %}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="blog-posts hfeed index-post-wrap" id="post-list">
       {% for post in paginator.posts %}
-      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-104.5 transition-all duration-300 ease-in-out">
+      <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
         {% if post.vignette %}
         {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
-        <div class="h-60 w-full pb-[33.33%] bg-contain bg-no-repeat bg-center"
-        style="background-image: url('{{ bg_url }}');"></div>
-        <hr class="bg-stone-50 opacity-50" />
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
         {% endif %}
         <div class="p-6">
           {% if post.auteurs and post.auteurs.size > 1 %}
@@ -126,7 +124,7 @@ pagination:
       {% endfor %}
       {% else %}
       {% endif %}
-    </div>
+    </article>
   </div>
   {% include pagination.html %}
 
