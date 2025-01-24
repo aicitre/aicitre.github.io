@@ -59,11 +59,13 @@ pagination:
     <div class="blog-posts hfeed index-post-wrap" id="post-list">
       {% for post in paginator.posts %}
       <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
+<a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
         {% if post.vignette %}
         {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
 <span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
 {% endif %}
- <div class="p-6">
+</a>
+<div class="entry-header">
 {% if post.auteurs and post.auteurs.size > 1 %}
 <div>
             <strong>
