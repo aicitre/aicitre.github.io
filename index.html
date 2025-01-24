@@ -90,20 +90,41 @@ layout: default
       </div>
 
   
-<div class="blog-posts hfeed index-post-wrap" id="post-list">
-<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
-{% assign news_posts = site.posts | where_exp: "post", "post.categories contains 'news'" %}
-              {% assign filtered_news_posts = "" | split: "" %}
+{% assign posts = paginator.posts %}
+  {% assign category_name = "Tous les articles" %}
+  {% assign navigation = site.data.navigation %}
+ 
+  {% if page.url contains '/category/news/' %}
+    {% assign posts = paginator.posts | where_exp: "post", "post.categories contains 'news'" %}
+    {% assign category_name = "Sujets d'actualité" %}
+  {% elsif page.url contains '/category/' %}
+    {% assign category_segments = page.url | split: '/' %}
+    {% if category_segments.size > 2 %}
+      {% assign category_id = category_segments[2] %}
+      {% for nav_item in navigation %}
+        {% if nav_item.url contains category_id %}
+          {% assign category_name = nav_item.title %}
+        {% endif %}
+      {% endfor %}
+      {% assign posts = paginator.posts | where_exp: "post", "post.categories contains category_id" %}
+      {% assign paginate_path = '/category/' | append: category_id | append: '/:num/' %}
+      {% assign first_page_path = '/category/' | append: category_id %}
+      {% else %}  
+    {% assign paginate_path = '/posts/:num/' %}
+    {% assign first_page_path = '/posts/' %}  
+    {% endif %}
+  {% else %}
+    {% assign paginate_path = '/posts/:num' %}
+    {% assign first_page_path = '/posts/' %}
+  {% endif %}
+	
+<div class="queryMessage "><span class="query-info query-label query-success">{{ category_name }}</span></div>
 
-              {% for post in news_posts %}
-              {% assign last_word = post.categories | split: " " | last %}
-              {% if last_word == "news" %}
-              {% assign filtered_news_posts = filtered_news_posts | push: post %}
-              {% endif %}
-              {% endfor %}
-
-              {% assign filtered_news_posts = filtered_news_posts | slice: 0, 6 %}
-              {% for post in filtered_news_posts %}
+  <div>
+    {% if posts and posts.size > 0 %}
+    <div class="blog-posts hfeed index-post-wrap" id="post-list">
+      {% for post in paginator.posts %}
+      <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
 <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
         {% if post.vignette %}
         {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
@@ -114,7 +135,7 @@ layout: default
 <span class="entry-category">{{ post.categories | join: ', ' }}</span>
 <h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
 <p class="line-clamp-3">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
- <p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+{% if post.auteurs and post.auteurs.size > 1 %}
 <div>
             <strong>
               {% for auteur in post.auteurs %}
@@ -142,27 +163,16 @@ layout: default
 </div>
           {% endif %}
           {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+      {% else %}
+      {% endif %}
+    </div>
   </div>
-</article>
-</div>
-
-
-  {% if paginator.total_pages > 1 %}
-  <ul class="flex justify-center list-none mt-6">
-    {% if paginator.previous_page %}
-    <li class="mx-2">
-      <a class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded"
-        href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}">&larr; Articles précédents</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="mx-2">
-      <a class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded"
-        href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}">Articles suivants &rarr;</a>
-    </li>
-    {% endif %}
-  </ul>
-  {% endif %}
+	
+  {% include pagination.html %}
+  
 
 </main>
 <!-- End Post -->
