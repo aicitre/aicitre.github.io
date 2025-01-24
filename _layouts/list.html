@@ -32,25 +32,9 @@ pagination:
     {% assign paginate_path = '/posts/:num' %}
     {% assign first_page_path = '/posts/' %}
   {% endif %}
-  
-  <nav aria-label="Breadcrumb" class="py-5">
-    <ol class="list-none flex">
-      <li class="text-navysciam text-xl font-medium">
-        <a href="/" class="hover:underline">Accueil</a>
-      </li>
-      <li class="text-navysciam mx-2 text-xl font-medium">
-        <span aria-hidden="true">/</span>
-      </li>
-      <li class="text-lightbluesciam text-xl font-medium">
-        {{ category_name }}
-      </li>
-    </ol>
-  </nav>
-
-
 	
 <div class="queryMessage "><span class="query-info query-label query-success">{{ category_name }}</span></div>
-	
+
   <div>
     {% if posts and posts.size > 0 %}
     <div class="blog-posts hfeed index-post-wrap" id="post-list">
