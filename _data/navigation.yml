@@ -1,3 +1,9 @@
+# Top Menu
+topmenu:
+- title: Home
+  url: '/'
+- title: Software Engineering
+  url: '/category/software'
 - title: Software Engineering
   url: '/category/software'
 - title: Data, IA & LLM
@@ -14,3 +20,28 @@
   url: 'https://www.sciam.fr/contact'
 - title: Sciam
   url: 'https://www.sciam.fr' 
+- title: Blogs 
+  sublinks:
+    - title: Travel
+      url: "about/"
+    - title: Food
+      url: "about/"
+    - title: Gaming
+      url: "blog/"
+    - title: Music
+      url: "music/"
+    - title: Marketing
+      url: "blog/"
+    - title: All
+      url: "blog/"
+- title: Contact
+  url: "contact/"
+
+# Footer Menu
+footermenu:
+- title: Home
+  url: "/"
+- title: Contact
+  url: "contact/"
+- title: Privacy Policy
+  url: "privacy-policy/"
