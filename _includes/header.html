@@ -11,55 +11,49 @@
 </div>
 </div>
 <div class="supermag-pro-main-nav section" id="supermag-pro-main-nav" name="Header Menu">
-                <div class="widget LinkList show-menu" data-version="2" id="LinkList101">
-                  <ul id="supermag-pro-main-nav-menu" role="menubar">
-                    {% for link in site.data.menus.topmenu %}
-                      {% if link.sublinks %}
-                        <li class="has-sub">
-                          <a href="#" role="menuitem" alt="{{ link.title }}">{{ link.title }}</a>
-                          <ul class="sub-menu m-sub">
-                            {% for sublink in link.sublinks %}
-                              {% if sublink.title == '---' %}
-                                <li><hr class="dropdown-divider"></li>
-                              {% else %}
-                                <li>
-                                  <a role="menuitem" href="{% unless sublink.external %}{{ site.baseurl }}{% endunless %}{{ sublink.url }}" alt="{{ sublink.title }}">
-                                    {{ sublink.title }}
-                                  </a>
-                                </li>
-                              {% endif %}
-                            {% endfor %}
-                          </ul>
-                        </li>
-                      {% else %}
-                        <li>
-                          <a role="menuitem" href="{% unless link.external %}{{ site.baseurl }}{% endunless %}{{ link.url }}" alt="{{ link.title }}">
-                            {{ link.title }}
-                          </a>
-                        </li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flex-right">
-              <div class="main-toggle-wrap">
-                <a class="main-toggle-style darkmode-toggle" href="javascript:;" role="button"></a>
-                <a class="main-toggle-style show-search" href="javascript:;" role="button" title="Telusuri"></a>
-              </div>
-            </div>
-            <div id="main-search-wrap">
-              <div class="main-search">
-                <form action="{{ site.baseurl }}/search" class="search-form" role="search">
-                  <input autocomplete="off" class="search-input" name="q" placeholder="{{ site.str_search }}" type="search" value="">
-                </form>
-                <a class="hide-search" href="javascript:;" role="button" title="Telusuri"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="widget LinkList show-menu" data-version="2" id="LinkList101">
+<ul id="supermag-pro-main-nav-menu" role="menubar">
+{% for link in site.data.menus.topmenu %}
+{% if link.sublinks %}
+<li class="has-sub">
+<a href="#" role="menuitem" alt="{{ link.title }}">{{ link.title }}</a>
+<ul class="sub-menu m-sub">
+{% for sublink in link.sublinks %}
+{% if sublink.title == '---' %}
+<li><hr class="dropdown-divider"></li>
+{% else %}
+<li>
+<a role="menuitem" href="{{ sublink.url }}" alt="{{ sublink.title }}">
+{{ sublink.title }}
+</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+</li>
+{% else %}
+<li>
+<a role="menuitem" href="{{ link.url }}" alt="{{ link.title }}">
+{{ link.title }}
+</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
+<div class="flex-right">
+<div class="main-toggle-wrap">
+<a class="main-toggle-style darkmode-toggle" href="javascript:;" role="button"></a>
+<a class="main-toggle-style show-search" href="javascript:;" role="button" title="Telusuri"></a>
+</div>
+</div>
+<div id="main-search-wrap">
+<div class="main-search">
+<form action="/search.html" class="search-form" role="search">
+<input autocomplete="off" class="search-input" name="query" placeholder="Rechercher..." type="search" value="">
+</form>
+<a class="hide-search" href="javascript:;" role="button" title="Telusuri"></a>
+</div></div></div></div></div></div></div>
 </header>
