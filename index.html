@@ -89,21 +89,61 @@ layout: default
         </div>
       </div>
 
-  <!-- This has the username of author. The one that you set with "author: name" in front-matter-->
-{% assign author_username = page.pagination.author %}
-
-<!-- Use page.pagination.author_data only if you have data file setup correctly -->
-{% assign author = page.pagination.author_data %}
-<!--
-  Now you can use the author variable anyhow.
-  It has all the data as defined inside _data/authors.yml for the current username.
--->
   
 <div class="blog-posts hfeed index-post-wrap" id="post-list">
-  {% assign paginator = site.posts | paginate: 5 %}
-  {% for post in paginator.posts %}
-    {% include postbox.html %}
-  {% endfor %}
+<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
+{% assign news_posts = site.posts | where_exp: "post", "post.categories contains 'news'" %}
+              {% assign filtered_news_posts = "" | split: "" %}
+
+              {% for post in news_posts %}
+              {% assign last_word = post.categories | split: " " | last %}
+              {% if last_word == "news" %}
+              {% assign filtered_news_posts = filtered_news_posts | push: post %}
+              {% endif %}
+              {% endfor %}
+
+              {% assign filtered_news_posts = filtered_news_posts | slice: 0, 6 %}
+              {% for post in filtered_news_posts %}
+<a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+        {% if post.vignette %}
+        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% endif %}
+</a>
+<div class="entry-header">
+<span class="entry-category">{{ post.categories | join: ', ' }}</span>
+<h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+<p class="line-clamp-3">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+ <p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+<div>
+            <strong>
+              {% for auteur in post.auteurs %}
+              {% assign author = site.data.authors[auteur] %}
+              {% if author.name %}
+              {% if forloop.first %}
+              {% elsif forloop.last %}
+              et
+              {% else %}
+              ,
+              {% endif %}
+              <span><a href="{{ '/author/' | append: auteur | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+              {% endif %}
+              {% endfor %}
+            </strong>
+          </div>
+          {% elsif post.author %}
+          {% assign author = site.data.authors[post.author] %}
+          {% if author.name %}
+<div class="entry-meta">
+<span class="entry-author">
+<span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
+</span>
+</div>
+          {% endif %}
+          {% endif %}
+  </div>
+</article>
 </div>
 
 
