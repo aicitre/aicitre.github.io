@@ -99,15 +99,18 @@ layout: default
   </div>
 
   <p>&nbsp;</p>
-  <div class="bg-white py-10 px-14 rounded-lg shadow-md">
-    <h2 class="text-2xl font-sans text-navysciam font-bold my-4">Articles publi&eacute;s</h2>
-    <div>
+  
+<div class="title-wrap related-title">
+<span class="title">Published articles</span>
+</div>
+    
+ <div class="blog-posts hfeed index-post-wrap" id="post-list">
       {% for post in paginator.posts %}
         {% include postbox.html %}
         <br>
       {% endfor %}
-    </div>
-  </div>
+</div>
+
 
   {% if paginator.total_pages > 1 %}
   <ul class="flex justify-center list-none mt-6">
