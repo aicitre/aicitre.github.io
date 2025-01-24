@@ -56,27 +56,22 @@ pagination:
     </h1>
   </div>
 
-  <div>
-{% for post in paginator.posts %}
-
-<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
-
-<a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
-
-{% if post.vignette %}
-{% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
-<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
-{% endif %}
-
-
-</a>
-<div class="entry-header">
-<span class="entry-category">{{ post.categories[0] }}</span>
-<h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
-<p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
-<div class="entry-meta">
-<span class="entry-author">
-{% if post.auteurs and post.auteurs.size > 1 %}
+<div>
+  {% for post in paginator.posts %}
+  <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
+    <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+      {% if post.vignette %}
+      {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+      <span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+      {% endif %}
+    </a>
+    <div class="entry-header">
+      <span class="entry-category">{{ post.categories[0] }}</span>
+      <h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+      <p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+      <div class="entry-meta">
+        <span class="entry-author">
+          {% if post.auteurs and post.auteurs.size > 1 %}
           <div>
             <strong>
               {% for auteur in post.auteurs %}
@@ -92,20 +87,20 @@ pagination:
               {% endif %}
               {% endfor %}
             </strong>
-     </div>
-		
+          </div>
           {% elsif post.author %}
           {% assign author = site.data.authors[post.author] %}
           {% if author.name %}
-<span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span></span>
-<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
-</div>
-</div>
-
-</article>
-
+          <span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+          {% endif %}
+          {% endif %}
+        </span>
+        <span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
   {% include pagination.html %}
 </div>
-
 
 </div></div>
