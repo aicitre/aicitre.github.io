@@ -86,24 +86,12 @@ pagination:
           {% elsif post.author %}
           {% assign author = site.data.authors[post.author] %}
           {% if author.name %}
-          <div class="flex text-sm text-gray-500 mb-4">
-            {% if author.picture %}
-            <img class="rounded-full w-11 h-11 inline"
-              src="{{ '/images/authors/' | append: author.picture | relative_url }}" alt="{{ author.name }}">
-            {% endif %}
-            <div class="flex flex-col pl-4">
-              <span class="text-base font-bold text-navysciam"><a
-                  href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{
-                  author.name }}</a></span>
-              <div class="flex">
-                <span class="text-base font-normal text-navysciam">{{ post.date | date: "%d/%m/%Y" }}</span>
-                {% unless post.vimeo-id %}
-                <p class="text-navysciam pl-2">• {{ post.content | reading_time | pluralize: "min" }} de
-                  lecture</p>
-		{% endunless %}
-              </div>
-            </div>
-          </div>
+<div class="entry-meta">
+<span class="entry-author">
+<span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
+</div>
+</div>
           {% endif %}
           {% endif %}
 <span class="entry-category">{{ post.categories | join: ', ' }}</span>
