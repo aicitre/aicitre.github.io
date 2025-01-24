@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% include ads/header-ads-wrap.html %}
 
 <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 pt-16 h-auto min-h-[30vh] p-10">
   <div class="col-span-12 flex flex-col sm:flex-row items-center justify-center rounded-lg pt-0 pb-2 sm:pb-5 gap-4 sm:gap-8">
@@ -338,3 +339,22 @@ layout: default
         <br>
       {% endfor %}
 </div>
+
+  {% if paginator.total_pages > 1 %}
+  <ul class="flex justify-center list-none mt-6">
+    {% if paginator.previous_page %}
+    <li class="mx-2">
+      <a class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded"
+        href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}">&larr; Articles précédents</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="mx-2">
+      <a class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded"
+        href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}">Articles suivants &rarr;</a>
+    </li>
+    {% endif %}
+  </ul>
+  {% endif %}
+
+{% include ads/footer-ads-wrap.html %}
