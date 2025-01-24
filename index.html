@@ -89,32 +89,22 @@ layout: default
         </div>
       </div>
 
+  <!-- This has the username of author. The one that you set with "author: name" in front-matter-->
+{% assign author_username = page.pagination.author %}
+
+<!-- Use page.pagination.author_data only if you have data file setup correctly -->
+{% assign author = page.pagination.author_data %}
+<!--
+  Now you can use the author variable anyhow.
+  It has all the data as defined inside _data/authors.yml for the current username.
+-->
+  
  <div class="blog-posts hfeed index-post-wrap" id="post-list">
       {% for post in paginator.posts %}
-{% assign author = site.authors[post.author] %}
-<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
-<a class="entry-image-wrap is-image" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
-{% if post.optimized_image %}
-<span class="entry-thumb lazy-ify" data-image="{{ post.optimized_image }}" style="background-image:url({{ post.optimized_image }})"></span>
-{% elsif post.image %}
-<span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
-{% else %}
-<span class="entry-thumb lazy-ify" data-image="/assets/img/off.jpg" style="background-image:url(/assets/img/off.png)"></span>
-{% endif %}
-</a>
-<div class="entry-header">
-<span class="entry-category">{{ post.categories[0] }}</span>
-<h2 class="entry-title"><a class="entry-title-link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
-<p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
-<div class="entry-meta">
-<span class="entry-author">
-<span class="by">by</span><span class="author-name">{% if post.author %}{{ author.display_name }}{% else %}{{ site.author }}{% endif %}</span></span>
-<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
-</div>
-</div>
-</article>
+        {% include postbox.html %}
       {% endfor %}
 </div>
+
 
   {% if paginator.total_pages > 1 %}
   <ul class="flex justify-center list-none mt-6">
