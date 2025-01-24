@@ -4,7 +4,7 @@ pagination:
   enabled: true
 ---
 
-<div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
   {% assign posts = paginator.posts %}
   {% assign category_name = "Tous les articles" %}
   {% assign navigation = site.data.navigation %}
@@ -46,8 +46,6 @@ pagination:
       </li>
     </ol>
   </nav>
-
-
 
   <div
     class="bg-gradient-to-r from-navysciamdark via-navysciam to-navysciamlight py-14 md:py-14 px-8 md:px-8 text-left mb-10 rounded-lg">
@@ -130,5 +128,5 @@ pagination:
       {% endif %}
     </div>
   </div>
-
-</div></div>
+  {% include pagination.html %}
+</div>
