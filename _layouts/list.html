@@ -104,6 +104,7 @@ pagination:
           </div>
           {% endif %}
           {% endif %}
+<span class="entry-category">{{ post.categories | join: ', ' }}</span>
 <h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>	
 <p class="line-clamp-3">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
         </div>
