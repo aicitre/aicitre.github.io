@@ -22,7 +22,7 @@ layout: default
   <span class="query-info query-label query-success"># {{ page.autopages.display_name }}</span>
 </div>
   
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="blog-posts hfeed index-post-wrap" id="post-list">
 {% for post in paginator.posts %}
 <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
 <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
