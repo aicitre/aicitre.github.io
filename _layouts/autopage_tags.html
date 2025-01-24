@@ -31,23 +31,12 @@ layout: default
 <span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
 {% endif %}
 </a>
-        <div class="px-12 py-6 flex flex-col justify-center">
-          <h3 class="text-xl font-sans text-navysciam font-bold mb-2"><a href="{{ post.url | relative_url }}">{{
-              post.title
-              }}</a></h3>
-          {% assign author = site.data.authors[post.author] %}
-          <div class="flex text-sm text-gray-500">
-            <div class="flex flex-col pl-4">
-              <span class="text-base font-bold text-navysciam"><a
-                  href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{
-                  author.name }}</a></span>
-              <div class="flex">
-                <span class="text-base font-normal text-navysciam">{{ post.date | date: "%d/%m/%Y" }}</span>
-                <p class="text-navysciam pl-2">• {{ post.content | reading_time | pluralize: "min" }} de
-                  lecture</p>
-              </div>
-            </div>
-          </div>
+<div class="entry-header">
+<span class="entry-category">{{ post.categories | join: ', ' }}</span>
+<h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+ {% assign author = site.data.authors[post.author] %}
+<span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+<span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
 <p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
         </div>
       </div>
