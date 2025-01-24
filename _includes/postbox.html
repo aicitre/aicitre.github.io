@@ -1,15 +1,22 @@
-<div class="mt-6 mb-10 flex flex-col md:flex-row border border-lightbluesciam rounded-lg shadow-md">
-  <div class="md:w-56 md:mr-5 mb-4 md:mb-0 flex md:flex-col justify-center items-center">
-    {% if post.vignette %}
-      <img src="{{ '/images/vignettes/' | append: post.vignette | relative_url }}" class="max-w-full h-auto mx-auto rounded-l-lg" />
-    {% endif %}
-  </div>
+<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
+<a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+        {% if post.vignette %}
+        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% endif %}
+</a>
+<div class="entry-header">
+<span class="entry-category">{{ post.categories | join: ', ' }}</span>
+<h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
+<p class="line-clamp-3">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+ <p class="entry-excerpt excerpt">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
+          <div class="entry-meta">
+            {% assign author = site.data.authors[post.author] %}
+            {% if author %}
+            <span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+            {% endif %}
+            <span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
+          </div>
 
-  <div class="flex flex-col justify-center">
-    <h3 class="text-xl font-sans text-navysciam font-bold mb-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p class="text-gray-600 mb-2">Publi&eacute; le {{ post.date | date: "%d/%m/%Y" }}</p>
-    <div>
-      {{ post.excerpt }}
-    </div>
   </div>
-</div>
+</article>
