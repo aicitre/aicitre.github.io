@@ -47,13 +47,10 @@ pagination:
     </ol>
   </nav>
 
-  <div
-    class="bg-gradient-to-r from-navysciamdark via-navysciam to-navysciamlight py-14 md:py-14 px-8 md:px-8 text-left mb-10 rounded-lg">
-    <h1 class="text-white text-4xl font-sans font-bold">
-      {{ category_name }}
-    </h1>
-  </div>
 
+	
+<div class="queryMessage "><span class="query-info query-label query-success">{{ category_name }}</span></div>
+	
   <div>
     {% if posts and posts.size > 0 %}
     <div class="blog-posts hfeed index-post-wrap" id="post-list">
