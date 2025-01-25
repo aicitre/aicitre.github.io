@@ -18,7 +18,7 @@
           }
           appendString += 
             `<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
-                 <span class="entry-thumb lazy-ify" style="background-image: url('${item.image}');"></span>    
+<span class="entry-thumb lazy-ify" data-image="${item.image}" style="background-image:url(${item.image})"></span>
             <div class="p-6">
                 <div class="text-xl font-bold mb-2 truncate">
                     <a href="${item.url}" class="hover:text-navysciam">${decodeHtmlEntities(item.title)}</a>
