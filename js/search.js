@@ -17,7 +17,7 @@
             console.error('URL is undefined for:', item.url);
           }
           appendString += 
-            `<div class="bg-white rounded-xl overflow-hidden shadow-lg">
+            `<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
             <div class="h-60 w-full pb-[33.33%] bg-contain bg-no-repeat bg-center rounded-xl"
                  style="background-image: url('${item.image}');"></div>
             <hr class="bg-zinc-200"/>     
@@ -43,7 +43,7 @@
                 <p class="line-clamp-3">${decodeHtmlEntities(item.excerpt)}</p>
                 <a href="${item.url}" class="text-navysciam hover:text-yellowsciam transition duration-300 ease-in-out">Read more...</a>
             </div>
-        </div>
+        </article>
             `;
         }
          
