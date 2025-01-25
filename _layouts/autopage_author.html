@@ -21,14 +21,6 @@ layout: default
 <span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})"></span>
     {% endif %}
 </div>
-    <div class="mt-6">
-      <h1 class="text-2xl font-sans text-navysciam font-bold">{{ author.name }}</h1>
-      <p class="font-semibold">{{ author.job }}</p>
-      <div class="mt-6">
-        <p>{{ author.bio }}</p>
-      </div>
-    </div>
-
 <div class="author-description">
 <span class="author-title">{{ author.name }}</span>
 <p class="font-semibold">{{ author.job }}</p>
@@ -40,7 +32,7 @@ layout: default
 <li class="linkedin">{% if links.linkedin %}<a href="https://www.linkedin.com/in/{{ links.linkedin }}" title="linkedin" rel="noopener noreferrer" target="_blank"></a>{% endif %}</li>
 <li class="external-link">{% if author.website %}<a href="{{ author.website }}" title="external-link" rel="noopener noreferrer" target="_blank"></a>{% endif %}</li>
 </div>
-
+</div>
 
 <div class="title-wrap related-title">
 <span class="title">Published articles</span>
