@@ -117,16 +117,16 @@ layout: default
   {% if paginator.total_pages > 1 %}
     {% if paginator.next_page %}
       <a class='blog-pager-older-link btn load-more' href='{{ paginator.next_page_path | relative_url }}' id='supermag-pro-load-more-link'>
-        <b:include data='{ message: &quot;loadMorePosts&quot; }' name='theme-custom-lang'/>
+        Load More
       </a>
       <span class='loading'><div class='loader'></div></span>
       <span class='no-more btn load-more'>
-        <b:include data='{ message: &quot;noMorePosts&quot; }' name='theme-custom-lang'/>
+       no More Posts
       </span>
     {% else %}
-      <span class='no-more btn load-more show'>
-        <b:include data='{ message: &quot;noMorePosts&quot; }' name='theme-custom-lang'/>
-      </span>
+<span class="no-more btn load-more show">
+That is All
+</span>
     {% endif %}
   {% endif %}
 </div>
