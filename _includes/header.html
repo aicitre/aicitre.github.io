@@ -21,10 +21,9 @@
 </div></div>
 <div class="topbar-social section" id="topbar-social" name="Topbar Icons"><div class="widget LinkList" data-version="2" id="LinkList106">
 <ul class="topbar-ul social-icons social">
-<li class="facebook link-0"><a alt="facebook" class="facebook" href="https://www.facebook.com/templateify" rel="noopener noreferrer" target="_blank" title="facebook"></a></li>
-<li class="twitter link-1"><a alt="twitter" class="twitter" href="https://twitter.com/templateify" rel="noopener noreferrer" target="_blank" title="twitter"></a></li>
-<li class="youtube link-2"><a alt="youtube" class="youtube" href="https://www.youtube.com/c/Templateify_Blogger" rel="noopener noreferrer" target="_blank" title="youtube"></a></li>
-<li class="rss link-3"><a alt="rss" class="rss" href="https://www.templateify.com/" rel="noopener noreferrer" target="_blank" title="rss"></a></li>
+{% for link in site.data.social-footer-links.social %}
+<li class="{{ link.name }} link-{{ forloop.index0 }}"><a alt="{{ link.name }}" class="{{ link.name }}" href="{{ link.url }}" rel="noopener noreferrer" target="_blank" title="{{ link.name }}"></a></li>
+{% endfor %}
 </ul>
 </div></div>
 </div>
