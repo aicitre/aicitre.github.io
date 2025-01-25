@@ -31,8 +31,8 @@ topmenu:
     - title: All
       url: "blog/"
 
-# Footer Menu
-footermenu:
+# Nav Menu
+navmenu:
 - title: Home
   url: "/"
 - title: Contact
