@@ -30,8 +30,6 @@ topmenu:
       url: "blog/"
     - title: All
       url: "blog/"
-- title: Contact
-  url: "contact/"
 
 # Footer Menu
 footermenu:
