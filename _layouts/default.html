@@ -59,6 +59,27 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     {% include mathjax.html %}
+
+
+<script src="{{ 'js/jquery.min.js'| relative_url}}"></script>
+<script src="{{ 'js/theia-sticky-sidebar.min.js'| relative_url}}"></script>
+<script src="{{ 'js/alltheme.js'| relative_url}}"></script>
+
+<script>
+  $(document).ready(function() {
+    function fixedSidebarIfy() {
+      $("#main-wrapper, #sidebar-wrapper").each(function() {
+        $(this).theiaStickySidebar({
+          containerSelector: "#content-wrapper > .container",
+          additionalMarginTop: 20,
+          additionalMarginBottom: 20
+        });
+      });
+    }
+
+    fixedSidebarIfy(); 
+  });
+</script>
 </body>
 
 </html>
