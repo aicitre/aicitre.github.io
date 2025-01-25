@@ -43,5 +43,28 @@
 </ul>
 </div>
 </div>
+<div class="mobile-menu-footer">
+  
+<div class="mobile-topbar-social social-bg"><ul class="topbar-ul social-icons social">
+{% for link in site.data.social-footer-links.social %}
+<li class="{{ link.name }} link-{{ forloop.index0 }}"><a alt="{{ link.name }}" class="{{ link.name }}" href="{{ link.url }}" rel="noopener noreferrer" target="_blank" title="{{ link.name }}"></a></li>
+{% endfor %}
+</ul></div>
+<div class="mobile-topbar-menu"><ul class="topbar-ul link-list">
+ {% for link in site.data.navigation.navmenu %}
+    <li>
+      <a href="{{ link.url }}" alt="{{ link.title }}">{{ link.title }}</a>
+      {% if link.sublinks %}
+        <ul class="sub-links">
+          {% for sublink in link.sublinks %}
+            <li><a href="{{ sublink.url }}" alt="{{ sublink.title }}">{{ sublink.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul></div>
+</div>
+  
 </div>
   <div class="overlay"></div>
