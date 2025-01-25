@@ -18,23 +18,16 @@
           }
           appendString += 
             `<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
+<a class="entry-image-wrap is-image" href="${item.url}" title="${decodeHtmlEntities(item.title)}">
 <span class="entry-thumb lazy-ify" data-image="${item.image}" style="background-image:url(${item.image})"></span>
-            <div class="p-6">
+</a>
+            <div class="entry-header">
                 <h2 class="entry-title"><a class="entry-title-link" href="${item.url}" rel="bookmark" title="${decodeHtmlEntities(item.title)}">${decodeHtmlEntities(item.title)}</a></h2>
-                <div class="flex items-center text-sm text-gray-500 mb-4">
-                    <div class="flex flex-col pl-4">
-                        <span class="text-base font-bold text-navysciam">
-                            <a href="${item.authorUrl}">${item.author}</a>
-                        </span>
-                        <div class="flex">
-                            <span class="text-base font-normal text-navysciam">
-                                ${item.date}
-                            </span>
-                            <p class="text-navysciam pl-2">• ${item.readingTime} min de lecture</p>
-                        </div>
-                    </div>
-                </div>
                 <p class="entry-excerpt excerpt">${decodeHtmlEntities(item.excerpt)}</p>
+                    <div class="entry-meta">
+                        <span class="entry-author"><span class="by">by</span><span class="author-name"><a href="${item.authorUrl}">${item.author}</a></span></span>
+                        <span class="entry-time"><span class="on">-</span><time class="published" datetime="${item.date}">${item.date}</time></span>
+                    </div>
             </div>
         </article>
             `;
