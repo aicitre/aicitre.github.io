@@ -32,7 +32,6 @@ permalink: /search.html
                 "image": "{{ '/images/vignettes/' | append: post.vignette | relative_url }}",
                 "author": "{{ site.data.authors[post.author].name | xml_escape }}",
                 "date": "{{ post.date | date: "%d/%m/%Y" }}",
-                "readingTime": {{ post.content | reading_time | xml_escape}},
                 "excerpt": "{{ post.excerpt | strip_html | normalize_whitespace | escape_once | replace: "\n", "" | xml_escape }}",
                 "content": {{ post.content | strip_html | strip_newlines | jsonify }},
                             }
