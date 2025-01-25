@@ -1,6 +1,11 @@
-<div class="blog-posts hfeed index-post-wrap" id="post-list">
-{% for post in site.posts limit:6 %}
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
+<div class="blog-posts hfeed index-post-wrap" id="post-list">
+  {% for post in posts %}
     <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
       <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
         {% if post.vignette %}
@@ -21,5 +26,7 @@
         </div>
       </div>
     </article>
-        {% endfor %}
+  {% endfor %}
 </div>
+
+{% include paginator.html %}
