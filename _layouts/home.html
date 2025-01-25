@@ -4,8 +4,8 @@ pagination:
   enabled: true
 ---
 
-<div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
-
+<div class="flex-center" id="content-wrapper" style="transform: none;">
+<div class="featured container row-x1 section" id="featured" name="Featured Posts">
 <div class="widget PopularPosts" data-version="2" id="PopularPosts1"> 
 <div class="widget-content"> <div class="featured-items"> <div class="featured-left"> 
 {% for post in site.posts limit:1 %} <div class="featured-item item-{{ forloop.index0 }}"> 
@@ -29,9 +29,11 @@ pagination:
 <h2 class="entry-title"> <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a> </h2>
 </div> </div> {% endfor %} </div> </div> </div> </div> </div></div>
 
-
-<div class="flex-center" id="content-wrapper"><div class="container row-x1"> 
+<div class="flex-center" id="content-wrapper" style="transform: none;">
+<div class="container row-x1" style="transform: none;">
+	
 <main id="main-wrapper">
+	
       <div class="trending section" id="trending" name="Trending Posts">
         <div class="widget PopularPosts" data-version="2" id="PopularPosts2">
           <div class="widget-title title-wrap">
@@ -62,8 +64,14 @@ pagination:
           </div>
         </div>
       </div>
+
 	
+	
+{% include home-ads.html %}
+
+<div class="main section" id="main" name="Main Posts"><div class="widget Blog" data-version="2" id="Blog1">
   {% assign posts = paginator.posts %}
+  {% assign category_name = "Latest News" %}
   {% assign navigation = site.data.navigation %}
  
   {% if page.url contains '/category/news/' %}
@@ -89,9 +97,8 @@ pagination:
     {% assign paginate_path = '/posts/:num' %}
     {% assign first_page_path = '/posts/' %}
   {% endif %}
-
-  <div>
-    {% if posts and posts.size > 0 %}
+<div class="blog-posts-title title-wrap"><h3 class="title">{{ category_name }}&gt;</h3></div>
+    {% if posts and posts.size &gt; 0 %}
     <div class="blog-posts hfeed index-post-wrap" id="post-list">
       {% for post in paginator.posts %}
       <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
@@ -105,7 +112,7 @@ pagination:
 <span class="entry-category">{{ post.categories | join: ', ' }}</span>
 <h2 class="entry-title"><a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h2>
 <p class="line-clamp-3">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
-{% if post.auteurs and post.auteurs.size > 1 %}
+{% if post.auteurs and post.auteurs.size &gt; 1 %}
 <div>
             <strong>
               {% for auteur in post.auteurs %}
@@ -139,9 +146,10 @@ pagination:
       {% else %}
       {% endif %}
     </div>
-  </div>
 	
   {% include pagination.html %}
+
+</div></div>
 	
 
 	
