@@ -1,4 +1,38 @@
-<header id="header-wrapper"><div class="main-header"><div class="header-inner show"><div class="header-header flex-center"><div class="container row-x1"><div class="header-items"><div class="flex-left">
+<header id="header-wrapper">
+  
+<nav class="topbar-wrap flex-center">
+<div class="container row-x1">
+<div class="topbar-items">
+<div class="topbar-menu section" id="topbar-menu" name="Topbar Menu"><div class="widget LinkList" data-version="2" id="LinkList105">
+<ul class="topbar-ul link-list">
+  {% for link in site.data.navigation.navmenu %}
+    <li>
+      <a href="{{ link.url }}" alt="{{ link.title }}">{{ link.title }}</a>
+      {% if link.sublinks %}
+        <ul class="sub-links">
+          {% for sublink in link.sublinks %}
+            <li><a href="{{ sublink.url }}" alt="{{ sublink.title }}">{{ sublink.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+</div></div>
+<div class="topbar-social section" id="topbar-social" name="Topbar Icons"><div class="widget LinkList" data-version="2" id="LinkList106">
+<ul class="topbar-ul social-icons social">
+<li class="facebook link-0"><a alt="facebook" class="facebook" href="https://www.facebook.com/templateify" rel="noopener noreferrer" target="_blank" title="facebook"></a></li>
+<li class="twitter link-1"><a alt="twitter" class="twitter" href="https://twitter.com/templateify" rel="noopener noreferrer" target="_blank" title="twitter"></a></li>
+<li class="youtube link-2"><a alt="youtube" class="youtube" href="https://www.youtube.com/c/Templateify_Blogger" rel="noopener noreferrer" target="_blank" title="youtube"></a></li>
+<li class="rss link-3"><a alt="rss" class="rss" href="https://www.templateify.com/" rel="noopener noreferrer" target="_blank" title="rss"></a></li>
+</ul>
+</div></div>
+</div>
+</div>
+</nav>
+  
+  
+<div class="main-header"><div class="header-inner show"><div class="header-header flex-center"><div class="container row-x1"><div class="header-items"><div class="flex-left">
 <div class="main-logo section" id="main-logo" name="Header Logo"><div class="widget Header" data-version="2" id="Header1">
 <a class="mobile-menu-toggle" href="javascript:;" role="button" title="Menu"></a>
 <a class="logo-img" href="{{ '/' | relative_url }}">
