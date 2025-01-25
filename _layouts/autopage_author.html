@@ -111,8 +111,6 @@ layout: default
 </div>
 
 <div class='blog-pager' id='blog-pager'>
-  <b:class cond='data:posts.empty' name='no-blog-posts'/>
-  
   <!-- Load More Pagination -->
   {% if paginator.total_pages > 1 %}
     {% if paginator.next_page %}
@@ -121,7 +119,7 @@ layout: default
       </a>
       <span class='loading'><div class='loader'></div></span>
       <span class='no-more btn load-more'>
-       no More Posts
+       That is All
       </span>
     {% else %}
 <span class="no-more btn load-more show">
