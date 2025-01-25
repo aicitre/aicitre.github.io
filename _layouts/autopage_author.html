@@ -110,23 +110,26 @@ layout: default
       {% endfor %}
 </div>
 
-
+<div class='blog-pager' id='blog-pager'>
+  <b:class cond='data:posts.empty' name='no-blog-posts'/>
+  
+  <!-- Load More Pagination -->
   {% if paginator.total_pages > 1 %}
-  <ul class="flex justify-center list-none mt-6">
-    {% if paginator.previous_page %}
-    <li class="mx-2">
-      <a class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded"
-        href="{{ paginator.previous_page_path | relative_url | replace: '//', '/' }}">&larr; Articles précédents</a>
-    </li>
-    {% endif %}
     {% if paginator.next_page %}
-    <li class="mx-2">
-      <a class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded"
-        href="{{ paginator.next_page_path | relative_url | replace: '//', '/' }}">Articles suivants &rarr;</a>
-    </li>
+      <a class='blog-pager-older-link btn load-more' href='{{ paginator.next_page_path | relative_url }}' id='supermag-pro-load-more-link'>
+        <b:include data='{ message: &quot;loadMorePosts&quot; }' name='theme-custom-lang'/>
+      </a>
+      <span class='loading'><div class='loader'></div></span>
+      <span class='no-more btn load-more'>
+        <b:include data='{ message: &quot;noMorePosts&quot; }' name='theme-custom-lang'/>
+      </span>
+    {% else %}
+      <span class='no-more btn load-more show'>
+        <b:include data='{ message: &quot;noMorePosts&quot; }' name='theme-custom-lang'/>
+      </span>
     {% endif %}
-  </ul>
   {% endif %}
+</div>
   
   </div></div></main>
 <!-- End Post -->
