@@ -20,9 +20,7 @@
             `<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
 <span class="entry-thumb lazy-ify" data-image="${item.image}" style="background-image:url(${item.image})"></span>
             <div class="p-6">
-                <div class="text-xl font-bold mb-2 truncate">
-                    <a href="${item.url}" class="hover:text-navysciam">${decodeHtmlEntities(item.title)}</a>
-                </div>
+                <h2 class="entry-title"><a class="entry-title-link" href="${item.url}" rel="bookmark" title="${decodeHtmlEntities(item.title)}">${decodeHtmlEntities(item.title)}</a></h2>
                 <div class="flex items-center text-sm text-gray-500 mb-4">
                     <div class="flex flex-col pl-4">
                         <span class="text-base font-bold text-navysciam">
@@ -36,8 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="line-clamp-3">${decodeHtmlEntities(item.excerpt)}</p>
-                <a href="${item.url}" class="text-navysciam hover:text-yellowsciam transition duration-300 ease-in-out">Read more...</a>
+                <p class="entry-excerpt excerpt">${decodeHtmlEntities(item.excerpt)}</p>
             </div>
         </article>
             `;
