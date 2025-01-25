@@ -31,7 +31,6 @@ permalink: /search.html
                 "title": "{{ post.title | xml_escape }}",
                 "image": "{{ '/images/vignettes/' | append: post.vignette | relative_url }}",
                 "author": "{{ site.data.authors[post.author].name | xml_escape }}",
-                "authorImage": "{{ '/images/authors/' | append: site.data.authors[post.author].picture | relative_url }}",
                 "date": "{{ post.date | date: "%d/%m/%Y" }}",
                 "readingTime": {{ post.content | reading_time | xml_escape}},
                 "excerpt": "{{ post.excerpt | strip_html | normalize_whitespace | escape_once | replace: "\n", "" | xml_escape }}",
