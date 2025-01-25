@@ -2,24 +2,20 @@
 topmenu:
 - title: Home
   url: '/'
-- title: Software Engineering
-  url: '/category/software'
-- title: Software Engineering
-  url: '/category/software'
-- title: Data, IA & LLM
-  url: '/category/llm'
-- title: Sciences co & Cyber
-  url: '/category/sciencesco'
-- title: Autres
-  url: '/category/autres'
-- title: Vidéos
-  url: '/category/video'
-- title: Auteurs
-  url: '/authors' 
-- title: Contact
-  url: 'https://www.sciam.fr/contact'
-- title: Sciam
-  url: 'https://www.sciam.fr' 
+- title: News
+  url: '/category/news'
+- title: Education
+  url: '/category/education'
+- title: Technology
+  url: '/category/technology'
+- title: Health
+  url: '/category/health'
+- title: Travel
+  url: '/category/travel'
+- title: Entertainment
+  url: '/category/entertainment'
+- title: Finance
+  url: '/category/finance' 
 - title: Blogs 
   sublinks:
     - title: Travel
