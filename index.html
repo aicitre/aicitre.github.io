@@ -1,39 +1,8 @@
 ---
 layout: default
-pagination:
-  enabled: true
-  paginate_path: '/posts/:num/'
 ---
 
 {% include ads/header-ads-wrap.html %}
-
-  {% assign posts = paginator.posts %}
-  {% assign category_name = "Tous les articles" %}
-  {% assign navigation = site.data.navigation %}
- 
-  {% if page.url contains '/category/news/' %}
-    {% assign posts = paginator.posts | where_exp: "post", "post.categories contains 'news'" %}
-    {% assign category_name = "Sujets d'actualité" %}
-  {% elsif page.url contains '/category/' %}
-    {% assign category_segments = page.url | split: '/' %}
-    {% if category_segments.size > 2 %}
-      {% assign category_id = category_segments[2] %}
-      {% for nav_item in navigation %}
-        {% if nav_item.url contains category_id %}
-          {% assign category_name = nav_item.title %}
-        {% endif %}
-      {% endfor %}
-      {% assign posts = paginator.posts | where_exp: "post", "post.categories contains category_id" %}
-      {% assign paginate_path = '/category/' | append: category_id | append: '/:num/' %}
-      {% assign first_page_path = '/category/' | append: category_id %}
-      {% else %}  
-    {% assign paginate_path = '/posts/:num/' %}
-    {% assign first_page_path = '/posts/' %}  
-    {% endif %}
-  {% else %}
-    {% assign paginate_path = '/posts/:num' %}
-    {% assign first_page_path = '/posts/' %}
-  {% endif %}
 
 <div class="flex-center" id="featured-wrapper"> <div class="featured container row-x1 section" id="featured" name="Featured Posts"> <div class="widget PopularPosts" data-version="2" id="PopularPosts1"> 
 <div class="widget-content"> <div class="featured-items"> <div class="featured-left"> 
