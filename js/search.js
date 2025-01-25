@@ -24,8 +24,6 @@
                     <a href="${item.url}" class="hover:text-navysciam">${decodeHtmlEntities(item.title)}</a>
                 </div>
                 <div class="flex items-center text-sm text-gray-500 mb-4">
-                    <img class="rounded-full w-11 h-11"
-                        src="${item.authorImage}" alt="${item.author}">
                     <div class="flex flex-col pl-4">
                         <span class="text-base font-bold text-navysciam">
                             <a href="${item.authorUrl}">${item.author}</a>
