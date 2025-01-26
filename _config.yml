@@ -13,6 +13,9 @@ highlighter: rouge
 
 logo: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin-yOkrSkvSvLX-921gqh__wUmEPM8BX5D3smW0XWiidLvAxwWP-vNclkNlh4DGyBGfpzstKFeA8r3xTRnzPVur47e-95n5FvAj3Hi4r72bOeqZspONFWQ8kUy5Tb475T1OO2aLjtNFW7EcgxZPFAVHd-YP9QJubc7ax2EwBNj9HMp0L2IJsWyuXk6jGA/s393/MMFOOTY.PNG'
 
+markdown: kramdown
+asciidoc: true
+
 defaults:
   - scope:
       path: "_posts"
