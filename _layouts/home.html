@@ -107,7 +107,7 @@ pagination:
       {% for post in paginator.posts %}
       <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
 <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
-{% if post.image %} <span class="entry-thumb lazy-ify" data-image="{{ page.page-image }}" style="background-image:url({{ page.page-image }})"></span> {% endif %}
+{% if site.logo %}<span class="entry-thumb lazy-ify" data-image="{{ site.logo }}" style="background-image:url({{ site.logo }})"></span>{% endif %}
 </a>
 <div class="entry-header">
 <span class="entry-category">{{ post.categories | join: ', ' }}</span>
