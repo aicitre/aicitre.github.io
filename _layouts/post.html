@@ -46,11 +46,9 @@ pagination:
       {{page.vimeo-id | prepend: 'video::' | append: '[vimeo,640,480]' | asciidocify}}
       {% endif %}
 
-
 <div class="entry-labels"><span class="labels-label">Tags:</span>
-{% if page.tags %}{% for tag in page.tags %}
-{% if page-tags.size > 0 %}{% for tag in page-tags %}{% assign tagSlug = tag | downcase | slugify: "raw" %}
-<a class="label-link" href="{{ '/tag/' | relative_url }}{{ tagSlug }}/" rel="tag">{{ tag }}</a>
+{% if page.page-tags.size > 0 %}{% for tag in page.page-tags %}{% assign tagSlug = tag | downcase | slugify: "raw" %}
+<a class="label-link" href="{{ '/tag/' | relative_url }}{{ tagSlug }}/" rel="tag">#{{ tag }}</a>
 {% endfor %}{% endif %}
 </div>
 
