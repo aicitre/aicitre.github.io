@@ -10,6 +10,7 @@ pagination:
 <article class="blog-post hentry item-post"><div class='item-post-inner'>
 
 <div class="entry-header blog-entry-header has-meta">
+{% include breadcrumb.html %}
 <h1 class="entry-title">{{ page.title }}</h1>
 <div class="entry-meta"><div class="align-left">
 {% if page.auteurs.size > 1 %}{% for auteur in page.auteurs %}{% assign author = site.data.authors[auteur] %}{% if author.name %}
