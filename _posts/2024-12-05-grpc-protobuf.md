@@ -1,5 +1,5 @@
 ---
-title: "Video - Orchestrer ses workflows métiers avec Kogito"
+title: Video - Orchestrer ses workflows métiers avec Kogito
 page-excerpt: "A la découverte de Kogito, le moteur de workflow cloud-native de Red Hat, et de son intégration avec Quarkus."
 page-layout: post
 author: chakerfezai
