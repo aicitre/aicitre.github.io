@@ -1,6 +1,5 @@
 ---
-= Les nouveautés de Java 23 : partie 3
-showtitle:
+showtitle: Les nouveautés de Java 23 : partie 3
 page-navtitle: Les nouveautés de Java 23 : partie 3
 page-excerpt: Ce troisième article est consacré aux évolutions dans JVM Hotspot, dans les outils, les API et dans la sécurité.
 layout: post
