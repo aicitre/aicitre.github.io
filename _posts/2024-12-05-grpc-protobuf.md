@@ -3,11 +3,11 @@ title: Video - Orchestrer ses workflows métiers avec Kogito
 page-excerpt: "A la découverte de Kogito, le moteur de workflow cloud-native de Red Hat, et de son intégration avec Quarkus."
 layout: post
 author: chakerfezai
-page-tags: [Kogito,Quarkus,BPMN,Conférence]
+tags: [Kogito,Quarkus,BPMN,Conférence]
 page-image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8a0g56GYgbV-4ZpTQw_LHeVj_fYIhV4-kZ7SEf3DNaEsKIrD4TTi_XG3K1lpS8XUTBDCPfTcvcWsSuYTCDZGi0HnY5b2DVIa23Sdld9BDjHUOU8mrzvFqvPc04pXcQJZZm4vM5nAD0kkoT_bS7OfUMC5xNDHIHgNPdVZ3xRhhJAcssSN5dpIVwq1r66o/s750/AI%20model%20DeepSeek.jpeg"
 page-vignette-licence: 'Source web'
 page-liquid:
-page-categories: software video
+categories: software video
 page-vimeo-id: 1045375608
 ---
 
