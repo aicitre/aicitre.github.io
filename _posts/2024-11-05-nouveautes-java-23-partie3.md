@@ -1,3 +1,4 @@
+---
 = Les nouveautés de Java 23 : partie 3
 :showtitle:
 :page-navtitle: Les nouveautés de Java 23 : partie 3
@@ -8,6 +9,7 @@
 :page-vignette: java-23.png
 :page-liquid:
 :page-categories: software news
+---
 
 Le premier article de cette série a détaillé les fonctionnalités proposées via des JEPS relatives à la syntaxe et aux API dans le JDK 23. 
 Comme pour les précédentes versions de Java, cette version 23 inclut des JEPs, mais aussi, et surtout, des évolutions et des améliorations sur la fiabilité (corrections de nombreux bugs), l’outillage, la performance et la sécurité.
