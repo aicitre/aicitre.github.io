@@ -4,7 +4,7 @@
   {% assign categories = page.categories | default: post.categories %}
   {% if categories and categories != empty %}
     {% assign primary_category = categories | first %}
-    <a class="label" href="{{ site.url }}/category/{{ primary_category | slugify }}/">
+    <a class="label" href="{{ site.url }}/category/{{ category_name }}/">
       {{ primary_category | strip | escape }}
     </a>
     <em class="delimiter"></em>
