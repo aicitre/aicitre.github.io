@@ -1,13 +1,14 @@
-= Les nouveautés de Java 23 : partie 2
-:showtitle:
-:page-navtitle: Les nouveautés de Java 23 : partie 2
-:page-excerpt: Ce second article est consacré aux autres autres évolutions dans les API ainsi que les fonctionnalités dépréciées et retirées.
-:layout: post
-:author: jeanmicheldoudoux
-:page-tags: [Java, Java 23, Projet Amber, Projet Panama, Projet Loom]
-:page-vignette: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8a0g56GYgbV-4ZpTQw_LHeVj_fYIhV4-kZ7SEf3DNaEsKIrD4TTi_XG3K1lpS8XUTBDCPfTcvcWsSuYTCDZGi0HnY5b2DVIa23Sdld9BDjHUOU8mrzvFqvPc04pXcQJZZm4vM5nAD0kkoT_bS7OfUMC5xNDHIHgNPdVZ3xRhhJAcssSN5dpIVwq1r66o/s750/AI%20model%20DeepSeek.jpeg
-:page-liquid:
-:page-categories: software news
+---
+title: "Les nouveautés de Java 23 : partie 2"
+page-navtitle: "Les nouveautés de Java 23 : partie 2"
+page-excerpt: "Ce second article est consacré aux autres autres évolutions dans les API ainsi que les fonctionnalités dépréciées et retirées."
+layout: post
+author: jeanmicheldoudoux
+page-tags: ["Java", "Java 23", "Projet Amber", "Projet Panama", "Projet Loom"]
+page-vignette: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8a0g56GYgbV-4ZpTQw_LHeVj_fYIhV4-kZ7SEf3DNaEsKIrD4TTi_XG3K1lpS8XUTBDCPfTcvcWsSuYTCDZGi0HnY5b2DVIa23Sdld9BDjHUOU8mrzvFqvPc04pXcQJZZm4vM5nAD0kkoT_bS7OfUMC5xNDHIHgNPdVZ3xRhhJAcssSN5dpIVwq1r66o/s750/AI%20model%20DeepSeek.jpeg"
+page-liquid:
+page-categories: ["software", "news"]
+---
 
 :include: {{ site.baseurl }}/ads/post1.html
 
