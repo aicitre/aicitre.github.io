@@ -16,7 +16,7 @@ topmenu:
   url: '/category/entertainment'
 - title: Finance
   url: '/category/finance' 
-- title: Blogs 
+- title: Menu
   sublinks:
     - title: Travel
       url: "about/"
