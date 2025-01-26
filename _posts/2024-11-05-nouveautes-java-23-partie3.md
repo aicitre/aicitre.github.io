@@ -1,14 +1,14 @@
 ---
 = Les nouveautés de Java 23 : partie 3
-:showtitle:
-:page-navtitle: Les nouveautés de Java 23 : partie 3
-:page-excerpt: Ce troisième article est consacré aux évolutions dans JVM Hotspot, dans les outils, les API et dans la sécurité.
-:layout: post
-:author: jeanmicheldoudoux
-:page-tags: [Java, Java 23, Projet Amber, Projet Panama, Projet Loom]
-:page-vignette: java-23.png
-:page-liquid:
-:page-categories: software news
+showtitle:
+page-navtitle: Les nouveautés de Java 23 : partie 3
+page-excerpt: Ce troisième article est consacré aux évolutions dans JVM Hotspot, dans les outils, les API et dans la sécurité.
+layout: post
+author: jeanmicheldoudoux
+page-tags: [Java, Java 23, Projet Amber, Projet Panama, Projet Loom]
+page-vignette: java-23.png
+page-liquid:
+page-categories: software news
 ---
 
 Le premier article de cette série a détaillé les fonctionnalités proposées via des JEPS relatives à la syntaxe et aux API dans le JDK 23. 
