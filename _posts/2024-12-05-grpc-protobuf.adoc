@@ -11,6 +11,8 @@
 
 A lesser-known AI lab from China has sparked significant concern across Silicon Valley by releasing AI models that outperform the best in the United States while being developed at a fraction of the cost and with less-advanced hardware.  
 
+image::{{'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8a0g56GYgbV-4ZpTQw_LHeVj_fYIhV4-kZ7SEf3DNaEsKIrD4TTi_XG3K1lpS8XUTBDCPfTcvcWsSuYTCDZGi0HnY5b2DVIa23Sdld9BDjHUOU8mrzvFqvPc04pXcQJZZm4vM5nAD0kkoT_bS7OfUMC5xNDHIHgNPdVZ3xRhhJAcssSN5dpIVwq1r66o/s750/AI%20model%20DeepSeek.jpeg' | relative_url}}[image,width=100%]
+
 DeepSeek, the name of the lab, introduced a free, open-source large language model in December that reportedly took only two months and less than $6 million to develop. Remarkably, the model was built using Nvidia’s H800 chips, which are considered less powerful than the state-of-the-art H100 chips.  
 
 These developments have raised serious questions about whether America’s global leadership in artificial intelligence is under threat and have prompted debates about the enormous investments U.S. tech giants are making in AI models and data centers.  
