@@ -36,8 +36,8 @@ pagination:
 </div>
 	    
 <div class="separator" style="clear: both; text-align: center;">
-  {% if page.page-vignette %}
-    <img border="0" data-original-height="1000" data-original-width="1500" src="{{ page.page-vignette }}" alt="{{ page.title }}">
+  {% if page.page-image %}
+    <img border="0" data-original-height="1000" data-original-width="1500" src="{{ page.page-image }}" alt="{{ page.title }}">
   {% endif %}
 </div>
 
@@ -48,7 +48,7 @@ pagination:
 
 
 <div class="entry-labels"><span class="labels-label">Tags:</span>
-{% if page.tags.size > 0 %}{% for tag in page.tags %}{% assign tagSlug = tag | downcase | slugify: "raw" %}
+{% if page.page-tags.size > 0 %}{% for tag in page.page-tags %}{% assign tagSlug = tag | downcase | slugify: "raw" %}
 <a class="label-link" href="{{ '/tag/' | relative_url }}{{ tagSlug }}/" rel="tag">#{{ tag }}</a>
 {% endfor %}{% endif %}
 </div>
