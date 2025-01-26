@@ -1,15 +1,15 @@
-showtitle: 
-page-navtitle: How China’s New AI Model DeepSeek Is Threatening U.S. Dominance
-page-excerpt: A closer look at how DeepSeek's AI breakthroughs challenge U.S. technological leadership.
-layout: post
-author: kostiantynkompaniiets
-page-tags: AI, DeepSeek, China, Technology, OpenAI
-page-vignette: 
-page-liquid: 
-page-categories: technology
+= How China’s New AI Model DeepSeek Is Threatening U.S. Dominance
+:page-excerpt: A closer look at how DeepSeek's AI breakthroughs challenge U.S. technological leadership.
+:page-layout: post
+:author: chakerfezai
+:page-tags: [AI, DeepSeek, China, Technology, OpenAI]
+:page-vignette: 2024/Orchestrer-ses-workflows-metiers-avec-Kogito.jpg
+:page-vignette-licence: 'Source web'
+:page-liquid:
+:page-categories: technology
+:page-vimeo-id: 1045375608
 
-
-# How China’s New AI Model DeepSeek Is Threatening U.S. Dominance  
+== How China’s New AI Model DeepSeek Is Threatening U.S. Dominance  
 
 A lesser-known AI lab from China has sparked significant concern across Silicon Valley by releasing AI models that outperform the best in the United States while being developed at a fraction of the cost and with less-advanced hardware.  
 
@@ -17,27 +17,27 @@ DeepSeek, the name of the lab, introduced a free, open-source large language mod
 
 These developments have raised serious questions about whether America’s global leadership in artificial intelligence is under threat and have prompted debates about the enormous investments U.S. tech giants are making in AI models and data centers.  
 
-## DeepSeek’s Performance in Benchmark Tests  
+== DeepSeek’s Performance in Benchmark Tests  
 
 In a series of independent benchmark tests, DeepSeek’s model outperformed Meta’s Llama 3.1, OpenAI’s GPT-4o, and Anthropic’s Claude Sonnet 3.5 in a range of tasks, including complex problem-solving, mathematics, and coding. Furthermore, DeepSeek recently released a reasoning model, r1, which also surpassed OpenAI’s latest o1 model in multiple evaluations.  
 
 Microsoft CEO Satya Nadella commented on these advancements during the World Economic Forum in Davos, Switzerland:  
 > “To see the DeepSeek new model, it’s super impressive in terms of how effectively they’ve built an open-source model that is both compute-efficient and capable of remarkable inference-time performance. We should take developments out of China very, very seriously.”  
 
-## Navigating U.S. Export Controls  
+== Navigating U.S. Export Controls  
 
 DeepSeek’s achievements are particularly notable given the stringent semiconductor export restrictions imposed by the U.S. government, which prevent China from accessing cutting-edge chips like Nvidia’s H100s. These restrictions were intended to stifle China’s progress in AI development, but DeepSeek’s success suggests that the lab has either found innovative ways to circumvent these limitations or that the export controls are not as effective as intended.  
 
 According to Benchmark General Partner Chetan Puttagunta, DeepSeek may have utilized a technique called model distillation:  
 > “They can take a really good, big model and use it to train a smaller model to specialize in specific tasks. This approach is highly cost-efficient.”  
 
-## Who Is Behind DeepSeek?  
+== Who Is Behind DeepSeek?  
 
 Little is known about DeepSeek’s founder, Liang WenFeng. Media reports indicate that the lab originated from a Chinese hedge fund, High-Flyer Quant, which manages approximately $8 billion in assets.  
 
 DeepSeek is not the only Chinese company making strides in AI innovation. Renowned AI researcher Kai-Fu Lee revealed that his startup, 01.ai, trained a competitive model with a budget of just $3 million. Additionally, ByteDance, the parent company of TikTok, announced on Wednesday that its latest AI model outperformed OpenAI’s o1 in a critical benchmark test.  
 
-## A Growing Threat to U.S. AI Leadership  
+== A Growing Threat to U.S. AI Leadership  
 
 The success of DeepSeek and other Chinese AI initiatives underscores the adage, “Necessity is the mother of invention.” Aravind Srinivas, CEO of Perplexity, remarked:  
 > “Because they had to figure out workarounds, they ended up building something far more efficient.”  
