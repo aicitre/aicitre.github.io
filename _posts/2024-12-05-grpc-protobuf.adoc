@@ -7,7 +7,6 @@
 :page-vignette-licence: 'Source web'
 :page-liquid:
 :page-categories: technology
-:page-vimeo-id: 1045375608
 
 == How China’s New AI Model DeepSeek Is Threatening U.S. Dominance  
 
