@@ -7,7 +7,7 @@
 :page-liquid:
 :page-categories: technology
 
- == How China’s New AI Model DeepSeek Is Threatening U.S. Dominance  
+== How China’s New AI Model DeepSeek Is Threatening U.S. Dominance  
 
 A lesser-known AI lab from China has sparked significant concern across Silicon Valley by releasing AI models that outperform the best in the United States while being developed at a fraction of the cost and with less-advanced hardware.  
 
