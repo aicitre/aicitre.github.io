@@ -1,14 +1,9 @@
 <nav id="breadcrumb">
   <a class="home" href="{{ site.url }}">Home</a>
   <em class="delimiter"></em>
-  {% if page.categories and page.categories != empty %}
-    {% assign primary_category = page.categories | first %}
-    <a class="label" href="{{ site.url }}/category/{{ primary_category | slugify }}/">
-      {{ primary_category | strip | escape }}
-    </a>
-    <em class="delimiter"></em>
-  {% elsif post.categories and post.categories != empty %}
-    {% assign primary_category = post.categories | first %}
+  {% assign categories = page.categories | default: post.categories %}
+  {% if categories and categories != empty %}
+    {% assign primary_category = categories | first %}
     <a class="label" href="{{ site.url }}/category/{{ primary_category | slugify }}/">
       {{ primary_category | strip | escape }}
     </a>
