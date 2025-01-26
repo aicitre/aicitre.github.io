@@ -46,10 +46,14 @@ pagination:
       {% endif %}
 
 <div class="entry-labels"><span class="labels-label">Tags:</span>
-{% if page-tags.size > 0 %}{% for tag in page-tags %}{% assign tagSlug = tag | downcase | slugify: "raw" %}
+        {% if page.tags.size > 0 %}
+        {% for tag in page.tags %}
+        {% assign tagSlug = tag | downcase | slugify: "raw" %}
 <a class="label-link" href="{{ '/tag/' | relative_url }}{{ tagSlug }}/" rel="tag">#{{ tag }}</a>
-{% endfor %}{% endif %}
+        {% endfor %}
+        {% endif %}
 </div>
+
 
 {% include social-share.html %}
 	
