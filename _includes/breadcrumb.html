@@ -3,10 +3,12 @@
   <em class="delimiter"></em>
   {% if page.categories and page.categories != empty %}
     {% assign primary_category = page.categories | first %}
-    <a class="label" href="{{ site.url }}/category/{{ primary_category | slugify }}/">
-      {{ primary_category | strip | escape }}
-    </a>
-    <em class="delimiter"></em>
+    {% if primary_category != "" %}
+      <a class="label" href="{{ site.url }}/category/{{ primary_category | slugify }}/">
+        {{ primary_category | strip | escape }}
+      </a>
+      <em class="delimiter"></em>
+    {% endif %}
   {% endif %}
   <span class="current">{{ page.title | escape }}</span>
 </nav>
