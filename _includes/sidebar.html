@@ -8,13 +8,10 @@
     {% for post in random_posts limit:1 %}
       <div class="random-post post big-post item-0">
         <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
-          {% if post.optimized_image %}
-            <span class="entry-thumb lazy-ify" data-image="{{ post.optimized_image }}" style="background-image:url({{ post.optimized_image }})"></span>
-          {% elsif post.image %}
-            <span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
-          {% else %}
-            <span class="entry-thumb lazy-ify" data-image="/images/off.png" style="background-image:url(/images/off.png)"></span>
-          {% endif %}
+{% if post.vignette %}
+        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% endif %}
         </a>
         <div class="entry-header">
           <span class="entry-category">{{ post.categories | join: ', ' }}</span>
@@ -29,13 +26,10 @@
     {% for post in random_posts limit:3 offset:1 %}
       <div class="random-post post item-{{ forloop.index }}">
         <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
-          {% if post.optimized_image %}
-            <span class="entry-thumb lazy-ify" data-image="{{ post.optimized_image }}" style="background-image:url({{ post.optimized_image }})"></span>
-          {% elsif post.image %}
-            <span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
-          {% else %}
-            <span class="entry-thumb lazy-ify" data-image="/assets/img/off.jpg" style="background-image:url(/assets/img/off.png)"></span>
-          {% endif %}
+{% if post.vignette %}
+        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% endif %}
         </a>
         <div class="entry-header">
           <span class="entry-category">{{ post.categories | join: ', ' }}</span>
