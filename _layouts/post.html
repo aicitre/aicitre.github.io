@@ -90,7 +90,7 @@ pagination:
         <div class="related-item post item-{{ forloop.index0 }}">
           <a title="{{ post.title }}" class="entry-image-wrap is-image" href="{{ post.url | relative_url }}">
         {% if post.vignette %}
-        {% assign bg_url = '/images/vignettes/' | append: post.vignette | relative_url %}
+        {% assign bg_url = '' | append: post.vignette | relative_url %}
             <span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
             {% endif %}
           </a>
