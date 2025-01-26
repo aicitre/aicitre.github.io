@@ -1,11 +1,13 @@
 <nav id="breadcrumb">
   <a class="home" href="{{ site.url }}">Home</a>
   <em class="delimiter"></em>
-  {% if page.categories %}
+  
+  {% if page.categories and page.categories.size > 0 %}
     {% assign primary_category = page.categories | first %}
-    <a class="label" href="{{ site.url }}/category/{{ post.categories | join: ', ' }}/">{{ post.categories | join: ', ' }}</a>
+    <a class="label" href="{{ site.url }}/category/{{ primary_category | slugify }}/">{{ primary_category }}</a>
     <em class="delimiter"></em>
   {% endif %}
+
   <span class="current">{{ page.title | escape }}</span>
 </nav>
 
