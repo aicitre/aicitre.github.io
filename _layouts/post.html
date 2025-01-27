@@ -37,13 +37,6 @@ pagination:
 </div></div>
 </div>
 	    
-<div class="separator" style="clear: both; text-align: center;">
-{% if page.image %}
-  <img alt="{{ page.title }}" border="0" src="{{ page.image }}" title="{{ page.title }}">
-{% else %}
-  <img alt="{{ page.title }}" border="0" src="" title="{{ page.title }}">
-{% endif %}
-</div>
 
       {{content}}
       {% if page.vimeo-id %}
