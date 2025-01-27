@@ -13,7 +13,7 @@
           <div class="entry-meta">
             {% assign author = site.data.authors[post.author] %}
             {% if author %}
-            <span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+            <span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | relative_url }}">{{ author.name }}</a></span>
             {% endif %}
             <span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
           </div>
