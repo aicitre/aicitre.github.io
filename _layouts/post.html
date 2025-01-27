@@ -38,8 +38,8 @@ pagination:
 </div>
 	    
 <div class="separator" style="clear: both; text-align: center;">
-{% if post.image %}
-  <img alt="{{ page.title }}" border="0" src="{{ post.image }}" title="{{ page.title }}">
+{% if page.image %}
+  <img alt="{{ page.title }}" border="0" src="{{ page.image }}" title="{{ page.title }}">
 {% else %}
   <img alt="{{ page.title }}" border="0" src="" title="{{ page.title }}">
 {% endif %}
