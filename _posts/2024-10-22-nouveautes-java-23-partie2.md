@@ -9,11 +9,11 @@ tags: [Java, Java 23, Projet Amber, Projet Panama, Projet Loom]
 author: loichermann
 ---
 
-{% include ads/post1.html %}
-
 Le [**premier article**](https://www.exemple.com/2024-10-14-nouveautes-java-23-partie1) de cette série a détaillé les fonctionnalités proposées via des JEPs relatives à la syntaxe et aux API dans le JDK 23.
 
 Comme pour les précédentes versions de Java, cette version 23 inclut des JEPs, mais aussi, et surtout, des évolutions et des améliorations sur la fiabilité (corrections de nombreux bugs), l’outillage, la performance et la sécurité.
+
+{% include ads/post1.html %}
 
 Ce second article est consacré aux autres évolutions dans les API ainsi que les fonctionnalités dépréciées et retirées.
 
