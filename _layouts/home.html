@@ -46,9 +46,10 @@ pagination:
               {% for post in site.posts limit:6 %}
 <div class="trending-item item-{{ forloop.index0 }}">
 <a class="entry-image-wrap {{ post.featured_image ? 'is-image' : 'is-video' }}" href="{{ post.url }}" title="{{ post.title }}">
-{% if post.vignette %}
-{% assign bg_url = '' | append: post.vignette | relative_url %}
-<span class="entry-thumb lazy-ify" data-image="{{ bg_url }}" style="background-image:url({{ bg_url }})"></span>
+{% if post.image %}
+<span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
+{% else %}
+<span class="entry-thumb lazy-ify" data-image="/images/off.png" style="background-image:url(/images/off.png)"></span>
 {% endif %}
 <span class="trending-count">{{ forloop.index }}</span>
 </a>
