@@ -132,7 +132,7 @@ pagination:
               {% else %}
               ,
               {% endif %}
-              <span><a href="{{ '/author/' | append: auteur | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+              <span><a href="{{ '/author/' | append: auteur | relative_url }}">{{ author.name }}</a></span>
               {% endif %}
               {% endfor %}
             </strong>
@@ -142,7 +142,7 @@ pagination:
           {% if author.name %}
 <div class="entry-meta">
 <span class="entry-author">
-<span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ author.name }}</a></span>
+<span class="by">by</span><span class="author-name"><a href="{{ '/author/' | append: post.author | relative_url }}">{{ author.name }}</a></span>
 <span class="entry-time"><span class="on">-</span><time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></span>
 </span>
 </div>
