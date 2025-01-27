@@ -73,7 +73,7 @@ pagination:
         {% else %}
         {% assign author = site.data.authors[page.author] %}
         {% if author.name %}
-        <a href="{{ '/author/' | append: page.author | append: '/index.html' | relative_url }}">
+        <a href="{{ '/author/' | append: page.author | relative_url }}">
           {% include author_bio.html %}
         </a>
         {% endif %}
