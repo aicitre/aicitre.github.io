@@ -1,3 +1,14 @@
+loichermann:
+  display_name: "Loic Herrmann"
+  avatar: "assets/img/loic-avatar.jpg"
+  description: "Développeur Java passionné et écrivain technique."
+  web: "https://www.example.com"
+  facebook: "https://facebook.com/loic"
+  twitter: "https://twitter.com/loic"
+  instagram: "https://www.instagram.com/loic"
+  youtube: "https://www.youtube.com/loic"
+  website: "https://www.loichermann.com"
+
 kacikechadi:
   name: 'Kaci Kechadi'
   bio: "Docteur en physique et spécialisé dans la modélisation des systèmes complexes, Kaci a développé durant son expérience de chercheur une approche pragmatique de la modélisation des données. Fasciné par le potentiel de l’intelligence artificielle à transformer, à la fois, le quotidien des individus et des entreprises, Kaci a rejoint SCIAM pour accompagner ses clients sur des thématiques liées à la valorisation de la donnée. Curieux et amateur de vulgarisation scientifique, il a participé à plusieurs ateliers à l’occasion de la Fête de la science. Kaci est également passionné de littérature francophone qu’il découvre en Kabylie où il a grandi !"
@@ -47,11 +58,6 @@ Il utilise Java depuis sa version 1.0 et aime partager sa passion pour cette pla
   twitter: "jmdoudoux"
   socials:
     linkedin: "jmdoudoux"
-
-loichermann:
-  name: "Loic Hermann"
-  job: "CTO"
-  picture: loichermann.png
   
 samuelberrien:
   name: "Samuel Berrien"
