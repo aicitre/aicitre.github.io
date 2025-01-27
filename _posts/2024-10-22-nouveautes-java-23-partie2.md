@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Les nouveautés de Java 23 : partie 2
+title: "Les nouveautés de Java 23 : partie 2"
 description: Ce second article est consacré aux autres évolutions dans les API ainsi que les fonctionnalités dépréciées et retirées.
 slug: nouveautes-java-23-partie2
 image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8a0g56GYgbV-4ZpTQw_LHeVj_fYIhV4-kZ7SEf3DNaEsKIrD4TTi_XG3K1lpS8XUTBDCPfTcvcWsSuYTCDZGi0HnY5b2DVIa23Sdld9BDjHUOU8mrzvFqvPc04pXcQJZZm4vM5nAD0kkoT_bS7OfUMC5xNDHIHgNPdVZ3xRhhJAcssSN5dpIVwq1r66o/s750/AI%20model%20DeepSeek.jpeg
