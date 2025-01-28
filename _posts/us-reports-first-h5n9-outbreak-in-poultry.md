@@ -4,7 +4,7 @@ title: "U.S. Reports First H5N9 Bird Flu Outbreak in Poultry, Raises Concern Ove
 description: "The first U.S. outbreak of H5N9 bird flu has been detected on a California duck farm, alongside the H5N1 strain. Authorities ramp up surveillance and investigation."
 slug: us-reports-first-h5n9-outbreak-in-poultry
 image: https://www.reuters.com/resizer/v2/2BW7UP4TPBMTNI52NVN3QBCXIE.jpg?auth=5955791802ca1bbee75834975e9a17bc25973f288fa23a14c6ab011f2baeb33b&width=640&quality=80
-categories: health, wildlife
+categories: health, wildlife, news
 tags: H5N9, bird flu, poultry, California, avian influenza, outbreak
 author: loichermann
 ---
