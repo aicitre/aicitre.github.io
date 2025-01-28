@@ -21,6 +21,8 @@ The legendary **Virtua Fighter** franchise makes its long-awaited return to PC w
 
 Alongside the release, a stunning **official launch trailer** has been unveiled, which you can watch below to catch a glimpse of the action-packed fighting mechanics and high-definition visuals.
 
+<div class="responsive-video-wrap"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/wKDD80JCv_o" width="560"></iframe></div>
+
 ### What's New in Virtua Fighter 5 R.E.V.O?
 
 **Virtua Fighter 5 R.E.V.O** is based on the updated **Virtua Fighter 5 Ultimate Showdown**, but it comes with several new and exciting improvements:
