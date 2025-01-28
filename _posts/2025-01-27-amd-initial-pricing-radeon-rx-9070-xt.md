@@ -15,6 +15,8 @@ author: pierrelepagnol
 
 ### AMD's Ambitious Initial Pricing for Radeon RX 9070 XT and RX 9070 Revealed
 
+{% include ads/post1.html %}
+
 As AMD's highly anticipated **Radeon RX 9070 XT** and **RX 9070** GPUs continue to build hype, a **Bulgarian retailer** has leaked intriguing details about the initial pricing strategy for these upcoming RDNA 4-based graphics cards. According to the retailer’s report, AMD originally planned to price the **RX 9070 XT** at **$899** and the **RX 9070** at **$749**—prices that might seem questionable given the rumored performance of these cards.
 
 #### Early Leaks and Delay Drama
@@ -40,6 +42,8 @@ AMD’s delay in launching the **RX 9070** series, originally scheduled for late
 </div>
 
 AMD’s **Frank Azor** previously mentioned that the company wants the **70-class RX GPUs** to compete head-to-head with **NVIDIA’s 70-class cards**—such as the **RTX 5070 Ti** and **RTX 5070**. These cards are priced at **$749** and **$549**, respectively, suggesting that AMD might price the **RX 9070 XT** and **RX 9070** more competitively—likely at or below **NVIDIA's price range**.
+
+{% include ads/post2.html %}
 
 Interestingly, the **RX 9070 XT** has been spotted in some recent leaks at a more reasonable price of **$529** for a **Gigabyte edition**, which challenges earlier pricing speculation. However, since these early listings can be speculative, the final launch prices are still uncertain.
 
