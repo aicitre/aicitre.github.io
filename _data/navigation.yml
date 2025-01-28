@@ -38,3 +38,5 @@ footmenu:
   url: "/privacy-policy"
 - title: Cookie Policy
   url: "/cookie-policy"
+- title: Terms of Use
+  url: "/terms-of-use"
