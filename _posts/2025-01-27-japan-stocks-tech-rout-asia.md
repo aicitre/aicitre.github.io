@@ -5,7 +5,7 @@ description: "A rout in U.S. technology stocks over concerns sparked by a Chines
 slug: japan-stocks-tech-rout-asia
 image: https://static01.nyt.com/images/2025/01/28/multimedia/28stocks-plqb/28stocks-plqb-superJumbo.jpg?quality=75&auto=webp
 categories: [finance, stock-market, technology]
-tags: Japan, [stocks, technology, Nikkei 225, market-crash, artificial-intelligence, Nvidia]
+tags: [Japan, stocks, technology, Nikkei 225, market-crash, artificial-intelligence, Nvidia]
 author: loichermann
 ---
 
