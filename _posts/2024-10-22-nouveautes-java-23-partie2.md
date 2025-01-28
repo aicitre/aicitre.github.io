@@ -3,11 +3,15 @@ layout: post
 title: "Record CO2 Levels to Hit 429.6 ppm in May 2025, Pushing Earth Past 2 Million Years of Climate History"
 description: "Global CO2 concentrations are set to reach alarming levels, threatening efforts to limit global warming to 1.5°C. Urgent action is needed to prevent irreversible climate damage."
 slug: co2-levels-hit-record-high-may-2025
-image: 
+image: https://gumlet.assettype.com/downtoearth%2F2025-01-18%2Fo4ggrrif%2FMauna-Loa.jpg?w=1024&auto=format%2Ccompress&fit=max
 categories: environment, climate-change
 tags: CO2, global warming, climate crisis, carbon emissions, Paris Agreement
 author: loichermann
 ---
+
+<div style="text-align: center;">
+  <img src="https://gumlet.assettype.com/downtoearth%2F2025-01-18%2Fo4ggrrif%2FMauna-Loa.jpg?w=1024&auto=format%2Ccompress&fit=max" alt="Carbon dioxide emissions to hit 429.6 ppm in May 2025, highest in over 2 million years">
+</div>
 
 ### CO2 Levels to Reach 429.6 ppm in May 2025, a Record Not Seen in Over 2 Million Years
 
