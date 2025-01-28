@@ -34,7 +34,7 @@ layout: default
         </a>
         <div class="entry-header">
           {% if post.categories and post.categories.size > 0 %}
-          <span class="entry-category">{{ post.categories | join: ', ' }}</span>
+          <span class="entry-category">{{ post.categories[0] }}</span>
           {% endif %}
           <h2 class="entry-title">
             <a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a>
