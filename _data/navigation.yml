@@ -32,6 +32,8 @@ navmenu:
 footmenu:
 - title: Home
   url: "/"
+- title: About Us
+  url: "/about-us"
 - title: Contact
   url: "/contact-us"
 - title: Privacy Policy
