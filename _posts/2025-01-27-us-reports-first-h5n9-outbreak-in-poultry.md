@@ -9,6 +9,8 @@ tags: [H5N9, bird flu, poultry, California, avian influenza, outbreak]
 author: loichermann
 ---
 
+![Bird Flu Outbreak in U.S.](https://www.reuters.com/resizer/v2/2BW7UP4TPBMTNI52NVN3QBCXIE.jpg?auth=5955791802ca1bbee75834975e9a17bc25973f288fa23a14c6ab011f2baeb33b&width=640&quality=80)
+
 ### U.S. Detects First H5N9 Outbreak in Poultry Amid Growing Avian Influenza Threat
 
 **Paris, January 27, 2025** – The United States has reported its first-ever outbreak of H5N9 bird flu in poultry, following the discovery of the virus on a duck farm in Merced County, California. The news, confirmed by the World Organisation for Animal Health (WOAH) on Monday, marks a concerning development as avian influenza continues to spread globally.
