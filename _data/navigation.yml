@@ -24,6 +24,6 @@ navmenu:
 - title: Home
   url: "/"
 - title: Contact
-  url: "contact/"
+  url: "/contact-us"
 - title: Privacy Policy
-  url: "privacy-policy/"
+  url: "/privacy-policy"
