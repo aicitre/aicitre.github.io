@@ -11,7 +11,7 @@
     "postcss-cli": "^11.0.0"
   },
   "scripts": {
-    "build:css": "npx tailwindcss -i ./css/styles.css -o _site/css/styles.css --watch"
+    "build:css": "npx tailwindcss -i ./css/main.css -o _site/css/main.css --watch"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-web": "^0.23.2",

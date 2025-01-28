@@ -1,22 +1,27 @@
 
-title: Blog Sciam
-description: Ce blog contient des articles techniques issus de la communeauté des salariés de SCIAM
-domain: sciam-fr.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://blog.sciam.fr  # the base hostname and protocol for your site, e.g. http://example.com
-locale: fr_FR
+title: MMFooty
+description: Discover a wide variety of topics ranging from e-commerce, news, and blogs to tutorials, technology, health, travel, gaming, and finance. Stay informed, entertained, and inspired with expert advice, product reviews, and helpful resources tailored to your interests.
+domain: aicitre.github.io      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://aicitre.github.io # the base hostname and protocol for your site, e.g. http://example.com
+locale: en_US
 permalink: pretty
-#baseurl: "/"
+baseurl: ""
 twitter:
   username: SCIAM_FR
   card: summary
 highlighter: rouge
+
+logo: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin-yOkrSkvSvLX-921gqh__wUmEPM8BX5D3smW0XWiidLvAxwWP-vNclkNlh4DGyBGfpzstKFeA8r3xTRnzPVur47e-95n5FvAj3Hi4r72bOeqZspONFWQ8kUy5Tb475T1OO2aLjtNFW7EcgxZPFAVHd-YP9QJubc7ax2EwBNj9HMp0L2IJsWyuXk6jGA/s393/MMFOOTY.PNG'
+
+markdown: kramdown
+asciidoc: true
 
 defaults:
   - scope:
       path: "_posts"
       type: "posts"
     values:
-      permalink: /:year/:month/:day/:title:output_ext
+      permalink: /:slug/
       toc: true
       
 social-network-links:

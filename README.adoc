@@ -1,4 +1,0 @@
-= Mode d'emploi SCIAM Blog
-:toc:
-
-Consultez le https://github.com/SCIAM-FR/sciam-fr.github.io/wiki[Wiki du blog]

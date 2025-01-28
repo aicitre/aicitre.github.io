@@ -1,10 +1,13 @@
-   <div>
-      {% if author.picture %}
-      <img class="rounded-full w-10 h-10" width="80px" height="80px" src="{{ '/images/authors/' | append: author.picture | relative_url }}" style="float:left;margin-right:15px;" />
-      {% endif %}
-      <h4 class="text-navysciam font-sans font-black text-base">{{ author.name }}</h4>
-      {% if author.job %}
-      <p class="text-navysciam font-sans font-normal text-base">{{ author.job }}</p>
-      {% endif %}
-   </div>
-   <br>
+<div class="about-author">
+<div class="avatar-container">
+{% if author.picture %}
+<span class="author-avatar lazy-ify" data-image="{{ '/images/authors/' | append: author.picture | relative_url }}" style="background-image:url({{ '/images/authors/' | append: author.picture | relative_url }})"></span>
+{% endif %}
+</div>
+<div class="author-description">
+<span class="author-title">{{ author.name }}</span>
+{% if author.job %}
+<p class="author-text excerpt">{{ author.job }}</p>
+{% endif %}
+</div>
+</div>

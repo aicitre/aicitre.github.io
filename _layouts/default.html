@@ -1,8 +1,12 @@
+---
+layout: compress
+---
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{page.title}}</title>
   <link rel="apple-touch-icon" sizes="57x57" href="{{ '/images/apple-icon-57x57.png' | relative_url }}">
@@ -24,12 +28,10 @@
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css"
-    rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
-  <link href="{{ './css/styles.css' | relative_url }}" rel="stylesheet">
 
+  <link href="{{ './css/main.css' | relative_url }}" rel="stylesheet">
+  
+<meta name="google-site-verification" content="2QkDBJSSaI3kkbK_EYSEPaHpMe0OBdlCnWNN2dFq_m0" />
   {% feed_meta %}
   {% seo %}
   {% if jekyll.environment == 'production' %}
@@ -37,106 +39,44 @@
   {% endif %}
 </head>
 
-<body class="bg-grayBgSciam scroll-smooth">
-  <div class="flex flex-col justify-between">
-    <nav class="bg-navysciam w-full sticky top-0 py-4 px-7 sm:px-28 z-50">
-      <div class="flex items-center justify-between">
-        <a href="{{ '/' | relative_url }}" class="flex items-center space-x-2">
-          <img src="/images/logo/logo_sciam_blanc.png" alt="Logo blanc" class="h-10 w-10">
-          <img src="/images/logo/logo_sciam_white.svg" alt="Logo SCIAM" class="w-20 font-bold">
-          <span class="mt-1.5"> <p class="text-white font-extralight text-2xl"> | Blog </p></span>
-        </a>
-        <div class="hidden nav:flex items-center space-x-4">
-          <ul class="flex flex-row">
-            {% for item in site.data.navigation %}
-            {% assign current_url = page.url | remove: 'index.html' | append: '/' %}
-            {% assign item_url = item.url | append: '/' %}
-            <li class="flex items-center">
-              <a href="{{ item.url | relative_url }}"
-                class="text-white no-underline hover:text-white hover:underline hover:underline-offset-2 hover:decoration-yellowsciam rounded-md 
-                {% if item.title == 'Sciam' %}px-3 py-0{% else %}px-3 py-2{% endif %} text-xl font-medium 
-                {% if current_url == item_url %}text-white{% else %}text-gray-500{% endif %}">
-                {% if item.title == 'Sciam' %}
-                  <img src="/images/icons/www-icon.svg" alt="www-icon" class="align-middle decoration-greysciam hover:decoration-white">
-                {% else %}
-                {{ item.title }}
-                {% endif %}
-              </a>
-            </li>
-            {% endfor %}
-            <li class="flex items-center">
-              <button id="searchButton" type="button" class="p-2 flex flex-row">
-                <img src="/images/icons/search-icon.svg" class="h-6 w-6 align-middle text-greysciam hover:text-white" alt="Search Icon">
-              </button>
-            </li>
-          </ul>
-        </div>
-      
-        <!-- version toggle mobile -->
-        <div class="nav:hidden">
-          <button type="button"
-            class="menu-button inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Toggle menu</span>
-            <img src="/images/icons/menu-open-icon.svg" class="menu-open-icon h-6 w-6 hidden">
-            <img src="/images/icons/menu-close-icon.svg" class="menu-close-icon h-6 w-6">
-          </button>
-        </div>
-      </div>
-        <!-- version menu déroulant mobile -->
-      <div class="nav:hidden hidden w-full" id="mobile-menu">
-        <div class="flex flex-col space-y-1 px-2 pb-3 pt-2">
-          {% for item in site.data.navigation %}
-          {% assign item_url = item.url | relative_url %}
-          <a href="{{ item_url }}" class="no-underline text-white hover:text-white block rounded-md px-3 py-2 text-base font-medium 
-          {% if page.url==item_url %}aria-current=page {% endif %}">
-            {{ item.title }}
-          </a>
-          {% endfor %}
-          <button id="mobileSearchButton" type="button" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-white">
-            <img src="/images/icons/search-icon.svg" class="h-6 w-6 align-middle text-white" alt="Search Icon">
-          </button>
-        </div>
-      </div>
-    </nav>
-      <div id="searchPopup" class="hidden fixed inset-0 flex items-center justify-center p-4 z-50">
-        <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-4 relative">                
-          <button id="closeSearchPopupButton" type="button" class="right-0 pb-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-2 h-2 ms-auto flex items-end dark:hover:bg-gray-600 dark:hover:text-white">
-            <img src="/images/icons/close-icon.svg" alt="Close Icon">
-              <span class="sr-only">Fermer recherche</span>
-          </button>  
-          <form action="/search.html" method="get" >
-            <div class="relative">
-            <input type="text" id="search-box" class="relative w-full pl-4 pr-10 py-2 rounded-lg text-xl border border-navysciam" name="query" placeholder="Rechercher...">
-              <button  type="submit" class="absolute inset-y-0 right-0 px-3 flex items-center bg-navysciam rounded-r-lg text-white">
-                <img src="/images/icons/search-icon.svg" class="h-6 w-6 align-middle text-greysciam hover:text-white" alt="Search Icon">
-              </button> 
-            </div>
-          </form>
-        </div>
-      </div>
-    <div class="content relative" id="mainContent">
-      {{ content }}
-    </div>
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+<body class="{{ layout }} is-multiple is-boxed">
+<div id='outer-wrapper'>
 
-    <footer id="footer-area">
-      <div>
-        {% include social-networks-links.html %}
-      </div>
-    </footer>
-  </div>
-  </div>
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+    
+</div>
   
-  <script src="{{ 'js/nav.js' | relative_url }}"></script>
-  <script src="{{ 'js/copy-to-clipboard.js' | relative_url }}"></script>
+  {% include mobile-menu.html %}
+  
   <script src="{{ 'js/color-code.js'| relative_url}}"></script>
   <script src="{{ 'js/search.js'| relative_url}}"></script>
   <script src="{{ 'js/lunr.js'| relative_url}}"></script>
-  <script src="{{ 'js/toc-scroll.js'| relative_url}}"></script>
-  <script src="{{ 'js/scroll-to-top.js'| relative_url}}"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    {% include mathjax.html %}
+
+
+<script src="{{ 'js/jquery.min.js'| relative_url}}"></script>
+<script src="{{ 'js/theia-sticky-sidebar.min.js'| relative_url}}"></script>
+<script src="{{ 'js/alltheme.js'| relative_url}}"></script>
+
+<script>
+  $(document).ready(function() {
+    function fixedSidebarIfy() {
+      $("#main-wrapper, #sidebar-wrapper").each(function() {
+        $(this).theiaStickySidebar({
+          containerSelector: "#content-wrapper > .container",
+          additionalMarginTop: 20,
+          additionalMarginBottom: 20
+        });
+      });
+    }
+
+    fixedSidebarIfy(); 
+  });
+</script>
 </body>
 
 </html>

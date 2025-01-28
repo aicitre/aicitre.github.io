@@ -17,33 +17,19 @@
             console.error('URL is undefined for:', item.url);
           }
           appendString += 
-            `<div class="bg-white rounded-xl overflow-hidden shadow-lg">
-            <div class="h-60 w-full pb-[33.33%] bg-contain bg-no-repeat bg-center rounded-xl"
-                 style="background-image: url('${item.image}');"></div>
-            <hr class="bg-zinc-200"/>     
-            <div class="p-6">
-                <div class="text-xl font-bold mb-2 truncate">
-                    <a href="${item.url}" class="hover:text-navysciam">${decodeHtmlEntities(item.title)}</a>
-                </div>
-                <div class="flex items-center text-sm text-gray-500 mb-4">
-                    <img class="rounded-full w-11 h-11"
-                        src="${item.authorImage}" alt="${item.author}">
-                    <div class="flex flex-col pl-4">
-                        <span class="text-base font-bold text-navysciam">
-                            <a href="${item.authorUrl}">${item.author}</a>
-                        </span>
-                        <div class="flex">
-                            <span class="text-base font-normal text-navysciam">
-                                ${item.date}
-                            </span>
-                            <p class="text-navysciam pl-2">• ${item.readingTime} min de lecture</p>
-                        </div>
+            `<article class="blog-post hentry index-post post-{{ forloop.index0 }}">
+<a class="entry-image-wrap is-image" href="${item.url}" title="${decodeHtmlEntities(item.title)}">
+<span class="entry-thumb lazy-ify" data-image="${item.image}" style="background-image:url(${item.image})"></span>
+</a>
+            <div class="entry-header">
+                <h2 class="entry-title"><a class="entry-title-link" href="${item.url}" rel="bookmark" title="${decodeHtmlEntities(item.title)}">${decodeHtmlEntities(item.title)}</a></h2>
+                <p class="entry-excerpt excerpt">${decodeHtmlEntities(item.excerpt)}</p>
+                    <div class="entry-meta">
+                        <span class="entry-author"><span class="by">by</span><span class="author-name"><a href="${item.authorUrl}">${item.author}</a></span></span>
+                        <span class="entry-time"><span class="on">-</span><time class="published" datetime="${item.date}">${item.date}</time></span>
                     </div>
-                </div>
-                <p class="line-clamp-3">${decodeHtmlEntities(item.excerpt)}</p>
-                <a href="${item.url}" class="text-navysciam hover:text-yellowsciam transition duration-300 ease-in-out">Read more...</a>
             </div>
-        </div>
+        </article>
             `;
         }
          
