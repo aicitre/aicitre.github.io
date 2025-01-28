@@ -37,12 +37,13 @@ pagination:
 </div></div>
 </div>
 	    
-
+<div class="entry-content-wrap"><div class="post-body entry-content" id="post-body">
       {{content}}
       {% if page.vimeo-id %}
       {{page.vimeo-id | prepend: 'video::' | append: '[vimeo,640,480]' | asciidocify}}
       {% endif %}
-
+</div></div>
+	
 <div class="entry-labels"><span class="labels-label">Tags:</span>
         {% if page.tags.size > 0 %}
         {% for tag in page.tags %}
