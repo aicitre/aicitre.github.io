@@ -27,3 +27,14 @@ navmenu:
   url: "/contact-us"
 - title: Privacy Policy
   url: "/privacy-policy"
+
+# Footer Menu
+footmenu:
+- title: Home
+  url: "/"
+- title: Contact
+  url: "/contact-us"
+- title: Privacy Policy
+  url: "/privacy-policy"
+- title: Cookie Policy
+  url: "/cookie-policy"
