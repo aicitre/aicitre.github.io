@@ -14,22 +14,10 @@ topmenu:
   url: '/category/travel'
 - title: Entertainment
   url: '/category/entertainment'
-- title: Finance
-  url: '/category/finance' 
 - title: Menu
   sublinks:
-    - title: Travel
-      url: "about/"
-    - title: Food
-      url: "about/"
-    - title: Gaming
-      url: "blog/"
-    - title: Music
-      url: "music/"
-    - title: Marketing
-      url: "blog/"
-    - title: All
-      url: "blog/"
+    - title: Finance
+      url: '/category/finance' 
 
 # Nav Menu
 navmenu:
