@@ -15,7 +15,7 @@
 {% endif %}
         </a>
         <div class="entry-header">
-          <span class="entry-category">{{ post.categories | join: ', ' }}</span>
+          <span class="entry-category">{{ post.categories[0] }}</span>
           <h2 class="entry-title">
             <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a>
           </h2>
@@ -34,7 +34,7 @@
 {% endif %}
         </a>
         <div class="entry-header">
-          <span class="entry-category">{{ post.categories | join: ', ' }}</span>
+          <span class="entry-category">{{ post.categories[0] }}</span>
           <h2 class="entry-title">
             <a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a>
           </h2>
