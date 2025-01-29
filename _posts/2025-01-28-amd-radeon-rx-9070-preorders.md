@@ -21,7 +21,7 @@ AMD is preparing for a late Q1 launch of its next-generation RDNA 4 GPUs, with p
 
 Originally, the Radeon 9000 series was expected to launch in January—likely around the 23rd, according to recent Reddit discussions—but the release was postponed. This delay has generated some frustration among users, prompting AMD's David McAfee to provide a tentative release window in March. He explained that the delay is intended to allow the company to enhance its software stack and implement FSR 4 support across more games.
 
-The March release timeline appears to be solidified, with American retailer B&H listing various custom models of the Radeon RX 9070 and RX 9070 XT graphics cards. The retailer has confirmed that these models will be available for preorder starting on March 23, which is approximately two months later than the originally scheduled January launch.
+The March release timeline appears to be solidified, with American retailer B&H listing various custom models of the Radeon RX 9070 and <a href="https://www.mmfooty.com/amd-initial-pricing-radeon-rx-9070-xt/">RX 9070 XT</a> graphics cards. The retailer has confirmed that these models will be available for preorder starting on March 23, which is approximately two months later than the originally scheduled January launch.
 
 It is important to note, however, that the March 23 date could be a placeholder, as it falls on a Sunday. Additionally, the listed models do not appear to feature AMD's reference design, with cards from brands such as Asus' Prime and TUF Gaming series being highlighted.
 
