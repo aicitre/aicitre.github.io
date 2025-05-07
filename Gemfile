@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem 'kramdown-parser-gfm'
   gem 'jekyll-postcss-v2'
+  gem 'jekyll-last-modified-at'
 end
 
 gem "webrick", "~> 1.8"
