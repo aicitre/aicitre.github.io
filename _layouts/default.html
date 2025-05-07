@@ -8,25 +8,53 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{page.title}}</title>
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="icon" type="image/x-icon" href="{{ '/images/favicon.ico' | relative_url }}">
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400"
-    rel="stylesheet">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+  <meta name="google-site-verification" content="RW9g-AGmdD8xbDhc_MKvQPS1DQ3yXfb3n8i9Vtg7T4o" />
+  {% if page.layout == "post" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description | default: site.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name | default: "Your Name" }}"
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.modified_at | date_to_xmlschema }}",
+    "image": "{{ page.image | default: '/assets/images/default-image.jpg' | absolute_url }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/images/logo.png' | relative_url }}"
+      }
+    },
+    "url": "{{ page.url | absolute_url }}"
+  }
+  </script>
+  {% endif %}
 
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.image | default: '/assets/images/default-image.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   <link href="{{ './css/main.css' | relative_url }}" rel="stylesheet">
   
-<meta name="google-site-verification" content="RW9g-AGmdD8xbDhc_MKvQPS1DQ3yXfb3n8i9Vtg7T4o" />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   {% feed_meta %}
   {% seo %}
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ page.title | default: site.title }}">
-<meta property="og:description" content="{{ page.description | default: site.description }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{{ page.image | default: '/assets/images/default-image.jpg' | absolute_url }}">
-<meta property="fb:app_id" content="973406334681076">
   
   {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
