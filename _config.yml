@@ -24,14 +24,6 @@ defaults:
       permalink: /:slug/
       toc: true
       
-social-network-links:
-  github: 'SCIAM-FR'
-  twitter: 'SCIAMVOX'
-  medium: 'sciam-fr'
-  linkedin: 'sciamfr'
-  www: 'sciam.fr'
-  gitlab: 'sciam'
-
 exclude:
   - LICENSE.adoc
   - README.adoc
