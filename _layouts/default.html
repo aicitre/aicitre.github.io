@@ -21,8 +21,9 @@
     "headline": "{{ page.title }}",
     "description": "{{ page.description | default: site.description }}",
     "author": {
-      "@type": "Person",
-      "name": "{{ site.author.name | default: "Your Name" }}"
+    "@type": "Person",
+    "name": "{{ page.author | default: site.author.name }}",
+    "url": "{{ site.url }}/authors/{{ page.author | downcase | replace: ' ', '-' }}"
     },
     "datePublished": "{{ page.date | date_to_xmlschema }}",
     "dateModified": "{{ page.modified_at | date_to_xmlschema }}",
