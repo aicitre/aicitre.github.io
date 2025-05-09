@@ -1,7 +1,7 @@
 
-title: MMFooty
-description: Discover a wide variety of topics ranging from e-commerce, news, and blogs to tutorials, technology, health, travel, gaming, and finance. Stay informed, entertained, and inspired with expert advice, product reviews, and helpful resources tailored to your interests.
-domain: www.mmfooty.com      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+title: "MMFooty"
+description: "Discover a wide variety of topics ranging from e-commerce, news, and blogs to tutorials, technology, health, travel, gaming, and finance. Stay informed, entertained, and inspired with expert advice, product reviews, and helpful resources tailored to your interests."
+domain: "www.mmfooty.com"      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://www.mmfooty.com # the base hostname and protocol for your site, e.g. http://example.com
 locale: en_US
 permalink: pretty
@@ -41,28 +41,9 @@ exclude:
 keep_files:
   - images
 
-asciidoc: {}
-
-asciidoctor:
-  base_dir: :docdir
-  safe: unsafe
-  excerpt_separator: "\n//more\n"
-  attributes:
-    sectlinks: true
-    stem: latexmath
-    idseparator: _
-    source-highlighter: rouge
-    source-language: java
-    rouge-css: style
-    rouge-style: github
-    icons: font
-    imagesdir: "/images"
-
 plugins:
   - jekyll-paginate-v2
   - jekyll-auto-authors
-  - jekyll-asciidoc
-  - asciidoctor-diagram
   - liquid_reading_time
   - liquid_pluralize
   - jekyll-feed
