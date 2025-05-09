@@ -5,7 +5,7 @@ domain: "www.mmfooty.com"      # if you want to force HTTPS, specify the domain 
 url: https://www.mmfooty.com # the base hostname and protocol for your site, e.g. http://example.com
 locale: en_US
 permalink: pretty
-baseurl: ""
+baseurl: "/"
 twitter:
   username: SCIAM_FR
   card: summary
