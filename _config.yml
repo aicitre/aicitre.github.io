@@ -21,7 +21,6 @@ defaults:
       
 exclude:
   - LICENSE.adoc
-  - README.adoc
   - Gemfile
   - Gemfile.lock
   - Rakefile
