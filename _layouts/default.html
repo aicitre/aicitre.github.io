@@ -8,7 +8,13 @@ layout: compress
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
+  <title>
+  {% if page.tag %}
+    Articles taggué avec {{ page.tag | replace: '-', ' ' | capitalize }}
+  {% else %}
+    {{ page.title | default: site.title }}
+  {% endif %}
+</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="icon" type="image/x-icon" href="{{ '/images/favicon.ico' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
