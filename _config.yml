@@ -93,15 +93,15 @@ autopages:
 
   # Other autopage configs stay the same
 
-tags:
-  layouts:
-    - "autopage_tags.html"
-  title: "Articles taggué avec #:tag"
-  permalink: "/tag/:tag"
-  silent: false
-  slugify:
-    mode: "default"
-    case: true
+ tags:
+    layouts:
+      - "autopage_tags.html"
+    title: "Articles taggué avec #:tag"
+    permalink: "/tag/:tag"
+    silent: false
+    slugify:
+      mode: "default"
+      case: true
 
   authors:
     enabled: true
