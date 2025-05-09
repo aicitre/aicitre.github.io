@@ -1,4 +1,3 @@
-
 title: "MMFooty"
 description: "Discover a wide variety of topics ranging from e-commerce, news, and blogs to tutorials, technology, health, travel, gaming, and finance. Stay informed, entertained, and inspired with expert advice, product reviews, and helpful resources tailored to your interests."
 url: "https://www.mmfooty.com"
@@ -18,7 +17,7 @@ defaults:
     values:
       permalink: /:slug/
       toc: true
-      
+
 exclude:
   - LICENSE.adoc
   - Gemfile
@@ -45,7 +44,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
   - jekyll-last-modified-at
- 
+
 pagination:
   enabled: true
   per_page: 12
@@ -59,16 +58,14 @@ autopages:
   categories:
     enabled: true
     layouts:
-       - 'list.html'
+      - 'list.html'
     title: 'Articles in :categories'
     silent: false
     slugify:
       mode: 'default'
       cased: true
-
-  # Other autopage configs stay the same
-
- tags:
+  tags:
+    enabled: true
     layouts:
       - "autopage_tags.html"
     title: "Articles taggué avec #:tag"
@@ -77,20 +74,18 @@ autopages:
     slugify:
       mode: "default"
       case: true
-
   authors:
     enabled: true
-    data: '_data/authors.yml' # Data file with the author details
-    layouts: 
-      - 'autopage_author.html' # We'll define this layout later
+    data: '_data/authors.yml'
+    layouts:
+      - 'autopage_author.html'
     title: 'Articles par :author'
     permalink: '/author/:author/'
     slugify:
-      mode: 'default' # choose from [raw, default, pretty, ascii or latin]
-      cased: true # if true, the uppercase letters in slug will be converted to lowercase ones.
-
+      mode: 'default'
+      cased: true
   collections:
-      enabled: false
+    enabled: false
 
 feed:
   excerpt_only: true
