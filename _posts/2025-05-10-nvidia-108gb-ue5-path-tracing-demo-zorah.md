@@ -28,7 +28,7 @@ Once you've loaded up the demo, you'll find yourself in a stunning scene built f
 
 ### The Power Behind Zorah’s Performance
 
-{% include ads/pos2.html %}
+{% include ads/post2.html %}
 
 At the heart of **Zorah’s** impressive performance are groundbreaking technologies like **DLSS 4 with frame generation**, a **Transformer-based AI model**, and the full suite of **RTX Neural Shaders**. These small, powerful neural networks run directly inside the shaders, allowing for real-time generation of textures, materials, lighting volumes, and even complex details like hair. 
 
