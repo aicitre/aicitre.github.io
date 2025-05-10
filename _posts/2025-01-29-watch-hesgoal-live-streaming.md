@@ -21,6 +21,8 @@ Hesgoal provides access to an extensive selection of live football broadcasts fr
 
 ## Free Access to Live Football Streams
 
+{% include all/tablesport.html %}
+
 {% include ads/post2.html %}
 
 One of Hesgoal's key advantages is its ability to offer free access to live football streams. This makes it an attractive and affordable option for football fans worldwide who want to stay connected to their favorite teams and leagues without the burden of costly subscriptions or pay-per-view services.
