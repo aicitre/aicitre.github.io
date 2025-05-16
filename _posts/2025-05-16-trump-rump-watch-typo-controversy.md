@@ -3,7 +3,7 @@ layout: post
 title: "‘RUMP’ Watch Flop: $640 Trump Timepiece Missing a Crucial ‘T’—And Customers Aren’t Laughing"
 description: "A Rhode Island couple paid $640 for a limited-edition Trump watch—only to receive a 'RUMP' watch due to a glaring typo. Read the full story behind this luxury mishap."
 slug: trump-rump-watch-typo-controversy
-image: 
+image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8fmSspgeyqDxxVj6X6r5n-r1uxuO8lzApAnfCxfa06UZAv39yDvhxNYFtB7ocE6h4Fa-cCQzxrHcHGJUGOw73w7YJtuO0k16ebeu0hyphenhyphenjDdfYUDOK9IbIm6Vf9ivQ0vTAJ0tIDq_m5Y_abqoGPSIgTguiVJa5KIUg6WuLzcpnOcMQ0xS3NPVD7CflavpE/s318/images.jpg
 categories: [news, politics, luxury]
 tags: [Donald Trump, watch controversy, luxury fails, customer complaints]
 author: loichermann
