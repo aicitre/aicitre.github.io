@@ -4,8 +4,8 @@ topmenu:
   url: '/'
 - title: News
   url: '/category/news'
-- title: Education
-  url: '/category/education'
+- title: Sports
+  url: '/category/sports'
 - title: Technology
   url: '/category/technology'
 - title: Health
