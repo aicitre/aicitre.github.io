@@ -5,8 +5,8 @@ description: "Stream live football matches from top leagues and tournaments with
 slug: "watch-live-football"
 image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiexjvbHdD86KxgGh5wKg4vF4p0h3rQKXS-yS0EosE5vKZC9ZM1oakb5cC4bxR6aWELWeWK6E4RdIT-WCVdHPs1F6CmjlMIb_caUx5IvVkBUrbnudO0UYv810xFrPOz5KsT3NjD__irbSShV5Juz_64eTBYy-xaqzlllTsRzmzK-kbSXAlBTWTg7jUHxpo/s225/football%20live.png
 categories: 
-  - Sports
-  - Football
+  - sports
+  - football
 tags:
   - Live Football Streaming
   - Soccerstreamlinks
